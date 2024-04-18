@@ -210,26 +210,26 @@
                           <span class="truncate">Groups</span>
                         </a>
                         <div>
-                          <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#guides">
+                          <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#the-group-model">
                             <span class="truncate">The group model</span>
                           </a>
-                          <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#">
+                          <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#list-all-groups">
                             <span class="truncate">List all group</span>
                             <span class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">GET</span>
                           </a>
-                          <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#">
+                          <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#create-a-group">
                             <span class="truncate">Create a group</span>
                             <span class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">POST</span>
                           </a>
-                          <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#">
+                          <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#retrieve-a-group">
                             <span class="truncate">Retrieve a group</span>
                             <span class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">GET</span>
                           </a>
-                          <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#">
+                          <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#update-a-group">
                             <span class="truncate">Update a group</span>
                             <span class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">PUT</span>
                           </a>
-                          <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#">
+                          <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#delete-a-group">
                             <span class="truncate">Delete a group</span>
                             <span class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">DELETE</span>
                           </a>
@@ -255,7 +255,1008 @@
           <main class="flex-auto">
             <article class="flex h-full flex-col pb-10 pt-16 dark:text-white">
               <div class="flex-auto prose dark:prose-invert [html_:where(&>*)]:mx-auto [html_:where(&>*)]:max-w-2xl [html_:where(&>*)]:lg:mx-[calc(50%-min(50%,theme(maxWidth.lg)))] [html_:where(&>*)]:lg:max-w-3xl">
-                
+                <!-- content start -->
+                <div class="w-full">
+                  <h1>Groups</h1>
+                  <p class="lead">
+                    Groups are where communities live in Protocol — they are a collection of contacts you're talking to all at once. On this page, we'll dive into the different group endpoints you can use to manage groups programmatically. We'll look at how to query, create, update, and delete groups.
+                  </p>
+                </div>
+                <!-- content end -->
+
+                <!-- The group model start -->
+                <div id="the-group-model">
+                  <h2 class="scroll-mt-24">
+                    <a class="group text-inherit no-underline hover:text-inherit" href="#the-group-model">
+                      <div class="absolute ml-[calc(-1*var(--width))] mt-1 hidden w-[var(--width)] opacity-0 transition [--width:calc(2.625rem+0.5px+50%-min(50%,calc(theme(maxWidth.lg)+theme(spacing.8))))] group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50 2xl:[--width:theme(spacing.10)]">
+                        <div class="group/anchor block h-5 w-5 rounded-lg bg-zinc-50 ring-1 ring-inset ring-zinc-300 transition hover:ring-zinc-500 dark:bg-zinc-800 dark:ring-zinc-700 dark:hover:bg-zinc-700 dark:hover:ring-zinc-600">
+                          <svg viewBox="0 0 20 20" fill="none" stroke-linecap="round" aria-hidden="true" class="h-5 w-5 stroke-zinc-500 transition dark:stroke-zinc-400 dark:group-hover/anchor:stroke-white"><path d="m6.5 11.5-.964-.964a3.535 3.535 0 1 1 5-5l.964.964m2 2 .964.964a3.536 3.536 0 0 1-5 5L8.5 13.5m0-5 3 3"></path></svg>
+                        </div>
+                      </div>
+                      <span>The group model</span>
+                    </a>
+                  </h2>
+                  <p>
+                    The group model contains all the information about your groups, including what contacts are in the group and the group's name, description, and avatar.
+                  </p>
+                  <h3>Properties</h3>
+                  <div class="my-6">
+                    <ul role="list" class="m-0 max-w-[calc(theme(maxWidth.lg)-theme(spacing.8))] list-none divide-y divide-zinc-900/5 p-0 dark:divide-white/5">
+                      <li class="m-0 px-0 py-4 first:pt-0 last:pb-0">
+                        <dl class="m-0 flex flex-wrap items-center gap-x-3 gap-y-2"><dt class="sr-only">Name</dt><dd><code>id</code></dd><dt class="sr-only">Type</dt><dd class="font-mono text-xs text-zinc-400 dark:text-zinc-500">string</dd><dt class="sr-only">Description</dt><dd class="w-full flex-none [&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0"><p>Unique identifier for the group.</p></dd></dl>
+                      </li>
+                      <li class="m-0 px-0 py-4 first:pt-0 last:pb-0">
+                        <dl class="m-0 flex flex-wrap items-center gap-x-3 gap-y-2"><dt class="sr-only">Name</dt><dd><code>name</code></dd><dt class="sr-only">Type</dt><dd class="font-mono text-xs text-zinc-400 dark:text-zinc-500">string</dd><dt class="sr-only">Description</dt><dd class="w-full flex-none [&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0"><p>The name for the group.</p></dd></dl>
+                      </li>
+                      <li class="m-0 px-0 py-4 first:pt-0 last:pb-0">
+                        <dl class="m-0 flex flex-wrap items-center gap-x-3 gap-y-2"><dt class="sr-only">Name</dt><dd><code>description</code></dd><dt class="sr-only">Type</dt><dd class="font-mono text-xs text-zinc-400 dark:text-zinc-500">string</dd><dt class="sr-only">Description</dt><dd class="w-full flex-none [&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0"><p>The description for the group.</p></dd></dl>
+                      </li>
+                      <li class="m-0 px-0 py-4 first:pt-0 last:pb-0">
+                        <dl class="m-0 flex flex-wrap items-center gap-x-3 gap-y-2"><dt class="sr-only">Name</dt><dd><code>avatar_url</code></dd><dt class="sr-only">Type</dt><dd class="font-mono text-xs text-zinc-400 dark:text-zinc-500">string</dd><dt class="sr-only">Description</dt><dd class="w-full flex-none [&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0"><p>The avatar image URL for the group.</p></dd></dl>
+                      </li>
+                      <li class="m-0 px-0 py-4 first:pt-0 last:pb-0">
+                        <dl class="m-0 flex flex-wrap items-center gap-x-3 gap-y-2"><dt class="sr-only">Name</dt><dd><code>conversation_id</code></dd><dt class="sr-only">Type</dt><dd class="font-mono text-xs text-zinc-400 dark:text-zinc-500">string</dd><dt class="sr-only">Description</dt><dd class="w-full flex-none [&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0"><p>Unique identifier for the conversation that belongs to the group.</p></dd></dl>
+                      </li>
+                      <li class="m-0 px-0 py-4 first:pt-0 last:pb-0">
+                        <dl class="m-0 flex flex-wrap items-center gap-x-3 gap-y-2"><dt class="sr-only">Name</dt><dd><code>contacts</code></dd><dt class="sr-only">Type</dt><dd class="font-mono text-xs text-zinc-400 dark:text-zinc-500">array</dd><dt class="sr-only">Description</dt><dd class="w-full flex-none [&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0"><p>An array of contact objects that are members of the group.</p></dd></dl>
+                      </li>
+                      <li class="m-0 px-0 py-4 first:pt-0 last:pb-0">
+                        <dl class="m-0 flex flex-wrap items-center gap-x-3 gap-y-2"><dt class="sr-only">Name</dt><dd><code>created_at</code></dd><dt class="sr-only">Type</dt><dd class="font-mono text-xs text-zinc-400 dark:text-zinc-500">timestamp</dd><dt class="sr-only">Description</dt><dd class="w-full flex-none [&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0"><p>Timestamp of when the group was created.</p></dd></dl>
+                      </li>
+                      <li class="m-0 px-0 py-4 first:pt-0 last:pb-0">
+                        <dl class="m-0 flex flex-wrap items-center gap-x-3 gap-y-2"><dt class="sr-only">Name</dt><dd><code>archived_at</code></dd><dt class="sr-only">Type</dt><dd class="font-mono text-xs text-zinc-400 dark:text-zinc-500">timestamp</dd><dt class="sr-only">Description</dt><dd class="w-full flex-none [&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0"><p>Timestamp of when the group was archived.</p></dd></dl>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+                <!-- The group model end -->
+                <hr>
+
+                <!-- List all groups start -->
+                <div class="xl:max-w-none" id="list-all-groups">
+                  <div class="flex items-center gap-x-3">
+                    <span class="font-mono text-[0.625rem] font-semibold leading-6 rounded-lg px-1.5 ring-1 ring-inset ring-emerald-300 dark:ring-emerald-400/30 bg-emerald-400/10 text-emerald-500 dark:text-emerald-400">GET</span>
+                    <span class="h-0.5 w-0.5 rounded-full bg-zinc-300 dark:bg-zinc-600"></span>
+                    <span class="font-mono text-xs text-zinc-400">/v1/groups</span>
+                  </div>
+                  <h2 class="mt-2 scroll-mt-24">
+                    <a class="group text-inherit no-underline hover:text-inherit" href="#list-all-groups">
+                      <div class="absolute ml-[calc(-1*var(--width))] mt-1 hidden w-[var(--width)] opacity-0 transition [--width:calc(2.625rem+0.5px+50%-min(50%,calc(theme(maxWidth.lg)+theme(spacing.8))))] group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50 2xl:[--width:theme(spacing.10)]">
+                        <div class="group/anchor block h-5 w-5 rounded-lg bg-zinc-50 ring-1 ring-inset ring-zinc-300 transition hover:ring-zinc-500 dark:bg-zinc-800 dark:ring-zinc-700 dark:hover:bg-zinc-700 dark:hover:ring-zinc-600">
+                          <svg viewBox="0 0 20 20" fill="none" stroke-linecap="round" aria-hidden="true" class="h-5 w-5 stroke-zinc-500 transition dark:stroke-zinc-400 dark:group-hover/anchor:stroke-white"><path d="m6.5 11.5-.964-.964a3.535 3.535 0 1 1 5-5l.964.964m2 2 .964.964a3.536 3.536 0 0 1-5 5L8.5 13.5m0-5 3 3"></path></svg>
+                        </div>
+                      </div>
+                      <span>List all groups</span>
+                    </a>
+                  </h2>
+                  <div class="grid grid-cols-1 items-start gap-x-16 gap-y-10 xl:max-w-none xl:grid-cols-2">
+                    <div class="[&>:first-child]:mt-0 [&>:last-child]:mb-0">
+                      <p>This endpoint allows you to retrieve a paginated list of all your groups. By default, a maximum of ten groups are shown per page.</p>
+                      <h3>Optional attributes</h3>
+                      <div class="my-6">
+                       <ul role="list" class="m-0 max-w-[calc(theme(maxWidth.lg)-theme(spacing.8))] list-none divide-y divide-zinc-900/5 p-0 dark:divide-white/5">
+                        <li class="m-0 px-0 py-4 first:pt-0 last:pb-0">
+                          <dl class="m-0 flex flex-wrap items-center gap-x-3 gap-y-2"><dt class="sr-only">Name</dt><dd><code>limit</code></dd><dt class="sr-only">Type</dt><dd class="font-mono text-xs text-zinc-400 dark:text-zinc-500">integer</dd><dt class="sr-only">Description</dt><dd class="w-full flex-none [&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0"><p>Limit the number of groups returned.<code>true</code>.</p></dd></dl>
+                        </li>
+                        <li class="m-0 px-0 py-4 first:pt-0 last:pb-0">
+                          <dl class="m-0 flex flex-wrap items-center gap-x-3 gap-y-2"><dt class="sr-only">Name</dt><dd><code>archived</code></dd><dt class="sr-only">Type</dt><dd class="font-mono text-xs text-zinc-400 dark:text-zinc-500">boolean</dd><dt class="sr-only">Description</dt><dd class="w-full flex-none [&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0"><p>Only show groups that are archived when set to <code>true</code>.</p></dd></dl>
+                        </li>
+                       </ul>
+                      </div>
+                    </div>
+                    <div class="[&>:first-child]:mt-0 [&>:last-child]:mb-0 xl:sticky xl:top-24">
+                      <div class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
+                        <div class="not-porse tab-component">
+                          <div class="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 dark:border-zinc-800 dark:bg-transparent">
+                            <h3 class="mr-auto m-0 pt-3 text-xs font-semibold text-white">Request</h3>
+                            <div class="-mb-px flex gap-4 text-xs font-medium" role="tablist">
+                              <button class="border-b py-3 transition ui-not-focus-visible:outline-none border-emerald-500 text-emerald-400" aria-label="tabs-tab-0" role="tab">cURL</button>
+                              <button class="border-b py-3 transition ui-not-focus-visible:outline-none border-transparent text-zinc-400 hover:text-zinc-300" aria-label="tabs-tab-1" role="tab">JavaScript</button>
+                              <button class="border-b py-3 transition ui-not-focus-visible:outline-none border-transparent text-zinc-400 hover:text-zinc-300" aria-label="tabs-tab-2" role="tab">Python</button>
+                              <button class="border-b py-3 transition ui-not-focus-visible:outline-none border-transparent text-zinc-400 hover:text-zinc-300" aria-label="tabs-tab-3" role="tab">PHP</button>
+                            </div>
+                          </div>
+                          <div class="flex h-9 items-center gap-2 border-y border-b-white/7.5 border-t-transparent bg-white/2.5 bg-zinc-900 px-4 dark:border-b-white/5 dark:bg-white/1">
+                            <div class="dark flex">
+                              <span class="font-mono text-[0.625rem] font-semibold leading-6 text-emerald-500 dark:text-emerald-400">GET</span>
+                            </div>
+                            <span class="h-0.5 w-0.5 rounded-full bg-zinc-500"></span>
+                            <span class="font-mono text-xs text-zinc-400">/v1/groups</span>
+                          </div>
+                          <div>
+                            <div aria-label="tabs-tab-0" role="tabpanel">
+                              <div class="group w-full dark:bg-white/2.5">
+                                <div class="relative">
+                                  <pre class="flex flex-col overflow-x-auto p-4 text-xs text-white pre">
+                                    <span style="color: var(--shiki-token-function)">curl <span style="color: var(--shiki-token-string)">-G https://api.protocol.chat/v1/groups</span><span style="color: var(--shiki-color-text)"> \</span></span>
+                                    <span class="pl-3"><span style="color: var(--shiki-token-string)">-H "Authorization: Bearer {token}"</span><span style="color: var(--shiki-color-text)"> \</span></span>
+                                    <span class="pl-3"><span style="color: var(--shiki-token-string)">-d limit=10</span></span>
+                                  </pre>
+                                  <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                                    <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                                      <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                        <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                                      </svg>
+                                      Copy
+                                    </span>
+                                    <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div aria-label="tabs-tab-1" class="hidden" role="tabpanel">
+                              <div class="group w-full dark:bg-white/2.5">
+                                <div class="relative">
+                                  <pre class="flex flex-col gap-3 overflow-x-auto p-4 text-xs text-white pre">
+                                    <span><span style="color: var(--shiki-token-keyword)">import</span><span style="color: var(--shiki-color-text)"> ApiClient </span><span style="color: var(--shiki-token-keyword)">from</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">'@example/protocol-api'</span></span>
+                                    <span></span>
+                                    <span><span style="color: var(--shiki-token-keyword)">const</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-constant)">client</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-keyword)">=</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-keyword)">new</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-function)">ApiClient</span><span style="color: var(--shiki-color-text)">(token)</span></span>
+                                    <span></span>
+                                    <span><span style="color: var(--shiki-token-keyword)">await</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-constant)">client</span><span style="color: var(--shiki-token-function)">.</span><span style="color: var(--shiki-token-constant)">groups</span><span style="color: var(--shiki-token-function)">.list</span><span style="color: var(--shiki-color-text)">()</span></span>
+                                  </pre>
+                                  <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                                    <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                                      <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                        <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                                      </svg>
+                                      Copy
+                                    </span>
+                                    <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div aria-label="tabs-tab-2" class="hidden" role="tabpanel">
+                              <div class="group w-full dark:bg-white/2.5">
+                                <div class="relative">
+                                  <pre class="flex flex-col gap-3 overflow-x-auto p-4 text-xs text-white pre">
+                                    <span><span style="color: var(--shiki-token-keyword)">from</span><span style="color: var(--shiki-color-text)"> protocol_api </span><span style="color: var(--shiki-token-keyword)">import</span><span style="color: var(--shiki-color-text)"> ApiClient</span></span>
+                                    <span></span>
+                                    <span><span style="color: var(--shiki-color-text)">client </span><span style="color: var(--shiki-token-keyword)">=</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-function)">ApiClient</span><span style="color: var(--shiki-token-punctuation)">(token)</span></span>
+                                    <span></span>
+                                    <span><span style="color: var(--shiki-color-text)">client</span><span style="color: var(--shiki-token-punctuation)">.</span><span style="color: var(--shiki-color-text)">groups</span><span style="color: var(--shiki-token-punctuation)">.</span><span style="color: var(--shiki-token-function)">list</span><span style="color: var(--shiki-token-punctuation)">()</span></span>
+                                  </pre>
+                                  <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                                    <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                                      <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                        <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                                      </svg>
+                                      Copy
+                                    </span>
+                                    <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div aria-label="tabs-tab-3" class="hidden" role="tabpanel">
+                              <div class="group w-full dark:bg-white/2.5">
+                                <div class="relative">
+                                  <pre class="flex flex-col gap-3 overflow-x-auto p-4 text-xs text-white pre">
+                                    <span><span style="color: var(--shiki-color-text)">$client </span><span style="color: var(--shiki-token-keyword)">=</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-keyword)">new</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-punctuation)">\</span><span style="color: var(--shiki-token-constant)">Protocol</span><span style="color: var(--shiki-token-punctuation)">\</span><span style="color: var(--shiki-token-constant)">ApiClient</span><span style="color: var(--shiki-color-text)">($token);</span></span>
+                                    <span></span>
+                                    <span><span style="color: var(--shiki-color-text)">$client</span><span style="color: var(--shiki-token-keyword)">-&gt;</span><span style="color: var(--shiki-color-text)">groups</span><span style="color: var(--shiki-token-keyword)">-&gt;</span><span style="color: var(--shiki-token-function)">list</span><span style="color: var(--shiki-token-punctuation)">()</span><span style="color: var(--shiki-color-text)">;</span></span>
+                                  </pre>
+                                  <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                                    <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                                      <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                        <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                                      </svg>
+                                      Copy
+                                    </span>
+                                    <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
+                        <div class="not-porse">
+                          <div class="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 dark:border-zinc-800 dark:bg-transparent">
+                            <h3 class="mr-auto m-0 pt-3 text-xs font-semibold text-white">Response</h3>
+                          </div>
+                          <div class="group dark:bg-white/2.5">
+                            <div class="relative" role="tabpanel">
+                              <pre class="flex flex-col overflow-x-auto p-4 text-xs text-white pre">
+                                <span><span style="color: var(--shiki-color-text)">{</span></span>
+                                <span><span style="color: var(--shiki-color-text)">  </span><span style="color: var(--shiki-token-keyword)">"has_more"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">false</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">  </span><span style="color: var(--shiki-token-keyword)">"data"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> [</span></span>
+                                <span><span style="color: var(--shiki-color-text)">    {</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"id"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"l7cGNIBKZiNJ6wqF"</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"name"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Plaza Hotel"</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"description"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"World-renowned."</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"avatar_url"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"https://assets.protocol.chat/avatars/plazahotel.jpg"</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"conversation_id"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"ZYjVAbCE9g5XRlra"</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"contacts"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> [</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        {</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-keyword)">"username"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Hector"</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-comment)">// ...</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        }</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        {</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-keyword)">"username"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Cedric"</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-comment)">// ...</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        }</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        {</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-keyword)">"username"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Hester"</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-comment)">// ...</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        }</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        {</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-keyword)">"username"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Cliff"</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-comment)">// ...</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        }</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      ]</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"created_at"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-constant)">692233200</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"archived_at"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-constant)">null</span></span>
+                                <span><span style="color: var(--shiki-color-text)">    }</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">    {</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"id"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"hSIhXBhNe8X1d8Et"</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-comment)">// ...</span></span>
+                                <span><span style="color: var(--shiki-color-text)">    }</span></span>
+                                <span><span style="color: var(--shiki-color-text)">  ]</span></span>
+                                <span><span style="color: var(--shiki-color-text)">}</span></span>
+                              </pre>
+                              <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                                <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                                  <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                    <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                                  </svg>
+                                  Copy
+                                </span>
+                                <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- List all messages end -->
+                <hr>
+
+                <!-- Create a group start -->
+                <div class="xl:max-w-none" id="create-a-group">
+                  <div class="flex items-center gap-x-3">
+                    <span class="font-mono text-[0.625rem] font-semibold leading-6 rounded-lg px-1.5 ring-1 ring-inset ring-sky-300 bg-sky-400/10 text-sky-500 dark:ring-sky-400/30 dark:bg-sky-400/10 dark:text-sky-400">POST</span>
+                    <span class="h-0.5 w-0.5 rounded-full bg-zinc-300 dark:bg-zinc-600"></span>
+                    <span class="font-mono text-xs text-zinc-400">/v1/groups</span>
+                  </div>
+                  <h2 class="mt-2 scroll-mt-24">
+                    <a class="group text-inherit no-underline hover:text-inherit" href="#create-a-group">
+                      <div class="absolute ml-[calc(-1*var(--width))] mt-1 hidden w-[var(--width)] opacity-0 transition [--width:calc(2.625rem+0.5px+50%-min(50%,calc(theme(maxWidth.lg)+theme(spacing.8))))] group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50 2xl:[--width:theme(spacing.10)]">
+                        <div class="group/anchor block h-5 w-5 rounded-lg bg-zinc-50 ring-1 ring-inset ring-zinc-300 transition hover:ring-zinc-500 dark:bg-zinc-800 dark:ring-zinc-700 dark:hover:bg-zinc-700 dark:hover:ring-zinc-600">
+                          <svg viewBox="0 0 20 20" fill="none" stroke-linecap="round" aria-hidden="true" class="h-5 w-5 stroke-zinc-500 transition dark:stroke-zinc-400 dark:group-hover/anchor:stroke-white"><path d="m6.5 11.5-.964-.964a3.535 3.535 0 1 1 5-5l.964.964m2 2 .964.964a3.536 3.536 0 0 1-5 5L8.5 13.5m0-5 3 3"></path></svg>
+                        </div>
+                      </div>
+                      <span>Create a group</span>
+                    </a>
+                  </h2>
+                  <div class="grid grid-cols-1 items-start gap-x-16 gap-y-10 xl:max-w-none xl:grid-cols-2">
+                    <div class="[&>:first-child]:mt-0 [&>:last-child]:mb-0">
+                      <p>
+                        This endpoint allows you to create a new group conversation between you and a group of your Protocol contacts.
+                      </p>
+                      <h3>Required attributes</h3>
+                      <div class="my-6">
+                        <ul role="list" class="m-0 max-w-[calc(theme(maxWidth.lg)-theme(spacing.8))] list-none divide-y divide-zinc-900/5 p-0 dark:divide-white/5">
+                          <li class="m-0 px-0 py-4 first:pt-0 last:pb-0">
+                            <dl class="m-0 flex flex-wrap items-center gap-x-3 gap-y-2"><dt class="sr-only">Name</dt><dd><code>name</code></dd><dt class="sr-only">Type</dt><dd class="font-mono text-xs text-zinc-400 dark:text-zinc-500">string</dd><dt class="sr-only">Description</dt><dd class="w-full flex-none [&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0"><p>The name for the group.</p></dd>
+                            </dl>
+                          </li>
+                        </ul>
+                      </div>
+                      <h3>Optional attributes</h3>
+                      <div class="my-6">
+                        <ul role="list" class="m-0 max-w-[calc(theme(maxWidth.lg)-theme(spacing.8))] list-none divide-y divide-zinc-900/5 p-0 dark:divide-white/5">
+                          <li class="m-0 px-0 py-4 first:pt-0 last:pb-0">
+                            <dl class="m-0 flex flex-wrap items-center gap-x-3 gap-y-2"><dt class="sr-only">Name</dt><dd><code>description</code></dd><dt class="sr-only">Type</dt><dd class="font-mono text-xs text-zinc-400 dark:text-zinc-500">string</dd><dt class="sr-only">Description</dt><dd class="w-full flex-none [&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0"><p>The description for the group.</p></dd>
+                            </dl>
+                          </li>
+                          <li class="m-0 px-0 py-4 first:pt-0 last:pb-0">
+                            <dl class="m-0 flex flex-wrap items-center gap-x-3 gap-y-2"><dt class="sr-only">Name</dt><dd><code>avatar_url</code></dd><dt class="sr-only">Type</dt><dd class="font-mono text-xs text-zinc-400 dark:text-zinc-500">string</dd><dt class="sr-only">Description</dt><dd class="w-full flex-none [&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0"><p>The avatar image URL for the group.</p></dd>
+                            </dl>
+                          </li>
+                          <li class="m-0 px-0 py-4 first:pt-0 last:pb-0">
+                            <dl class="m-0 flex flex-wrap items-center gap-x-3 gap-y-2"><dt class="sr-only">Name</dt><dd><code>contacts</code></dd><dt class="sr-only">Type</dt><dd class="font-mono text-xs text-zinc-400 dark:text-zinc-500">array</dd><dt class="sr-only">Description</dt><dd class="w-full flex-none [&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0"><p>An array of contact objects that are members of the group.</p></dd>
+                            </dl>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="[&>:first-child]:mt-0 [&>:last-child]:mb-0 xl:sticky xl:top-24">
+                      <div class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
+                        <div class="not-porse tab-component">
+                          <div class="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 dark:border-zinc-800 dark:bg-transparent">
+                            <h3 class="mr-auto m-0 pt-3 text-xs font-semibold text-white">Request</h3>
+                            <div class="-mb-px flex gap-4 text-xs font-medium" role="tablist">
+                              <button class="border-b py-3 transition ui-not-focus-visible:outline-none border-emerald-500 text-emerald-400" aria-label="tabs-tab-0" role="tab">cURL</button>
+                              <button class="border-b py-3 transition ui-not-focus-visible:outline-none border-transparent text-zinc-400 hover:text-zinc-300" aria-label="tabs-tab-1" role="tab">JavaScript</button>
+                              <button class="border-b py-3 transition ui-not-focus-visible:outline-none border-transparent text-zinc-400 hover:text-zinc-300" aria-label="tabs-tab-2" role="tab">Python</button>
+                              <button class="border-b py-3 transition ui-not-focus-visible:outline-none border-transparent text-zinc-400 hover:text-zinc-300" aria-label="tabs-tab-3" role="tab">PHP</button>
+                            </div>
+                          </div>
+                          <div class="flex h-9 items-center gap-2 border-y border-b-white/7.5 border-t-transparent bg-white/2.5 bg-zinc-900 px-4 dark:border-b-white/5 dark:bg-white/1">
+                            <div class="dark flex">
+                              <span class="font-mono text-[0.625rem] font-semibold leading-6 text-sky-500">POST</span>
+                            </div>
+                            <span class="h-0.5 w-0.5 rounded-full bg-zinc-500"></span>
+                            <span class="font-mono text-xs text-zinc-400">/v1/groups</span>
+                          </div>
+                          <div>
+                            <div aria-label="tabs-tab-0" role="tabpanel">
+                              <div class="group w-full dark:bg-white/2.5">
+                                <div class="relative">
+                                  <pre class="flex flex-col overflow-x-auto p-4 text-xs text-white pre">
+                                    <span><span style="color: var(--shiki-token-function)">curl</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string)">https://api.protocol.chat/v1/groups</span><span style="color: var(--shiki-color-text)"> \</span></span>
+                                    <span><span style="color: var(--shiki-color-text)">  </span><span style="color: var(--shiki-token-string)">-H</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Authorization: Bearer {token}"</span><span style="color: var(--shiki-color-text)"> \</span></span>
+                                    <span><span style="color: var(--shiki-color-text)">  </span><span style="color: var(--shiki-token-string)">-d</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string)">name=</span><span style="color: var(--shiki-token-string-expression)">"Plaza Hotel"</span></span>
+                                  </pre>
+                                  <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                                    <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                                      <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                        <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                                      </svg>
+                                      Copy
+                                    </span>
+                                    <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div aria-label="tabs-tab-1" class="hidden" role="tabpanel">
+                              <div class="group w-full dark:bg-white/2.5">
+                                <div class="relative">
+                                  <pre class="flex flex-col overflow-x-auto p-4 text-xs text-white pre">
+                                    <span><span style="color: var(--shiki-token-keyword)">import</span><span style="color: var(--shiki-color-text)"> ApiClient </span><span style="color: var(--shiki-token-keyword)">from</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">'@example/protocol-api'</span></span>
+                                    <span class="h-6"></span>
+                                    <span><span style="color: var(--shiki-token-keyword)">const</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-constant)">client</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-keyword)">=</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-keyword)">new</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-function)">ApiClient</span><span style="color: var(--shiki-color-text)">(token)</span></span>
+                                    <span class="h-6"></span>
+                                    <span><span style="color: var(--shiki-token-keyword)">await</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-constant)">client</span><span style="color: var(--shiki-token-function)">.</span><span style="color: var(--shiki-token-constant)">groups</span><span style="color: var(--shiki-token-function)">.create</span><span style="color: var(--shiki-color-text)">({</span></span>
+                                    <span><span style="color: var(--shiki-color-text)">  name</span><span style="color: var(--shiki-token-keyword)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">'Plaza Hotel'</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                    <span><span style="color: var(--shiki-color-text)">})</span></span>
+                                  </pre>
+                                  <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                                    <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                                      <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                        <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                                      </svg>
+                                      Copy
+                                    </span>
+                                    <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div aria-label="tabs-tab-2" class="hidden" role="tabpanel">
+                              <div class="group w-full dark:bg-white/2.5">
+                                <div class="relative">
+                                  <pre class="flex flex-col overflow-x-auto p-4 text-xs text-white pre">
+                                    <span><span style="color: var(--shiki-token-keyword)">from</span><span style="color: var(--shiki-color-text)"> protocol_api </span><span style="color: var(--shiki-token-keyword)">import</span><span style="color: var(--shiki-color-text)"> ApiClient</span></span>
+                                    <span class="h-6"></span>
+                                    <span><span style="color: var(--shiki-color-text)">client </span><span style="color: var(--shiki-token-keyword)">=</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-function)">ApiClient</span><span style="color: var(--shiki-token-punctuation)">(token)</span></span>
+                                    <span class="h-6"></span>
+                                    <span><span style="color: var(--shiki-color-text)">client</span><span style="color: var(--shiki-token-punctuation)">.</span><span style="color: var(--shiki-color-text)">groups</span><span style="color: var(--shiki-token-punctuation)">.</span><span style="color: var(--shiki-token-function)">create</span><span style="color: var(--shiki-token-punctuation)">(name</span><span style="color: var(--shiki-token-keyword)">=</span><span style="color: var(--shiki-token-string-expression)">"Plaza Hotel"</span><span style="color: var(--shiki-token-punctuation)">)</span></span>
+                                  </pre>
+                                  <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                                    <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                                      <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                        <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                                      </svg>
+                                      Copy
+                                    </span>
+                                    <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div aria-label="tabs-tab-3" class="hidden" role="tabpanel">
+                              <div class="group w-full dark:bg-white/2.5">
+                                <div class="relative">
+                                  <pre class="flex flex-col overflow-x-auto p-4 text-xs text-white pre">
+                                    <span><span style="color: var(--shiki-color-text)">$client </span><span style="color: var(--shiki-token-keyword)">=</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-keyword)">new</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-punctuation)">\</span><span style="color: var(--shiki-token-constant)">Protocol</span><span style="color: var(--shiki-token-punctuation)">\</span><span style="color: var(--shiki-token-constant)">ApiClient</span><span style="color: var(--shiki-color-text)">($token);</span></span>
+                                    <span class="h-6"></span>
+                                    <span><span style="color: var(--shiki-color-text)">$client</span><span style="color: var(--shiki-token-keyword)">-&gt;</span><span style="color: var(--shiki-color-text)">groups</span><span style="color: var(--shiki-token-keyword)">-&gt;</span><span style="color: var(--shiki-token-function)">create</span><span style="color: var(--shiki-token-punctuation)">(</span><span style="color: var(--shiki-color-text)">[</span></span>
+                                    <span><span style="color: var(--shiki-color-text)">  </span><span style="color: var(--shiki-token-string-expression)">'name'</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-keyword)">=&gt;</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">'Plaza Hotel'</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                    <span><span style="color: var(--shiki-color-text)">]</span><span style="color: var(--shiki-token-punctuation)">)</span><span style="color: var(--shiki-color-text)">;</span></span>
+                                  </pre>
+                                  <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                                    <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                                      <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                        <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                                      </svg>
+                                      Copy
+                                    </span>
+                                    <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
+                        <div class="not-porse">
+                          <div class="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 dark:border-zinc-800 dark:bg-transparent">
+                            <h3 class="mr-auto m-0 pt-3 text-xs font-semibold text-white">Response</h3>
+                          </div>
+                          <div class="group dark:bg-white/2.5">
+                            <div class="relative" role="tabpanel">
+                              <pre class="flex flex-col overflow-x-auto p-4 text-xs text-white pre">
+                                <span><span style="color: var(--shiki-color-text)">    {</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"id"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"l7cGNIBKZiNJ6wqF"</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"name"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Plaza Hotel"</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"description"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"World-renowned."</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"avatar_url"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"https://assets.protocol.chat/avatars/plazahotel.jpg"</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"conversation_id"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"ZYjVAbCE9g5XRlra"</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"contacts"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> [</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        {</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-keyword)">"username"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Hector"</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-comment)">// ...</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        }</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        {</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-keyword)">"username"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Cedric"</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-comment)">// ...</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        }</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        {</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-keyword)">"username"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Hester"</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-comment)">// ...</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        }</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        {</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-keyword)">"username"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Cliff"</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-comment)">// ...</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        }</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      ]</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"created_at"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-constant)">692233200</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"archived_at"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-constant)">null</span></span>
+                                <span><span style="color: var(--shiki-color-text)">    }</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                              </pre>
+                              <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                                <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                                  <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                    <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                                  </svg>
+                                  Copy
+                                </span>
+                                <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Create a conversation end -->
+                <hr>
+
+                <!-- Retrieve a group start -->
+                <div class="xl:max-w-none" id="retrieve-a-group">
+                  <div class="flex items-center gap-x-3">
+                    <span class="font-mono text-[0.625rem] font-semibold leading-6 rounded-lg px-1.5 ring-1 ring-inset ring-emerald-300 dark:ring-emerald-400/30 bg-emerald-400/10 text-emerald-500 dark:text-emerald-400">GET</span>
+                    <span class="h-0.5 w-0.5 rounded-full bg-zinc-300 dark:bg-zinc-600"></span>
+                    <span class="font-mono text-xs text-zinc-400">/v1/groups/:id</span>
+                  </div>
+                  <h2 class="mt-2 scroll-mt-24">
+                    <a class="group text-inherit no-underline hover:text-inherit" href="#retrieve-a-group">
+                      <div class="absolute ml-[calc(-1*var(--width))] mt-1 hidden w-[var(--width)] opacity-0 transition [--width:calc(2.625rem+0.5px+50%-min(50%,calc(theme(maxWidth.lg)+theme(spacing.8))))] group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50 2xl:[--width:theme(spacing.10)]">
+                        <div class="group/anchor block h-5 w-5 rounded-lg bg-zinc-50 ring-1 ring-inset ring-zinc-300 transition hover:ring-zinc-500 dark:bg-zinc-800 dark:ring-zinc-700 dark:hover:bg-zinc-700 dark:hover:ring-zinc-600">
+                          <svg viewBox="0 0 20 20" fill="none" stroke-linecap="round" aria-hidden="true" class="h-5 w-5 stroke-zinc-500 transition dark:stroke-zinc-400 dark:group-hover/anchor:stroke-white"><path d="m6.5 11.5-.964-.964a3.535 3.535 0 1 1 5-5l.964.964m2 2 .964.964a3.536 3.536 0 0 1-5 5L8.5 13.5m0-5 3 3"></path></svg>
+                        </div>
+                      </div>
+                      <span>Retrieve a group</span>
+                    </a>
+                  </h2>
+                  <div class="grid grid-cols-1 items-start gap-x-16 gap-y-10 xl:max-w-none xl:grid-cols-2">
+                    <div class="[&>:first-child]:mt-0 [&>:last-child]:mb-0">
+                      <p>
+                        This endpoint allows you to retrieve a group by providing the group id. Refer to <a href="#">the list</a> at the top of this page to see which properties are included with group objects.
+                      </p>
+                    </div>
+                    <div class="[&>:first-child]:mt-0 [&>:last-child]:mb-0 xl:sticky xl:top-24">
+                      <div class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
+                        <div class="not-porse tab-component">
+                          <div class="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 dark:border-zinc-800 dark:bg-transparent">
+                            <h3 class="mr-auto m-0 pt-3 text-xs font-semibold text-white">Request</h3>
+                            <div class="-mb-px flex gap-4 text-xs font-medium" role="tablist">
+                              <button class="border-b py-3 transition ui-not-focus-visible:outline-none border-emerald-500 text-emerald-400" aria-label="tabs-tab-0" role="tab">cURL</button>
+                              <button class="border-b py-3 transition ui-not-focus-visible:outline-none border-transparent text-zinc-400 hover:text-zinc-300" aria-label="tabs-tab-1" role="tab">JavaScript</button>
+                              <button class="border-b py-3 transition ui-not-focus-visible:outline-none border-transparent text-zinc-400 hover:text-zinc-300" aria-label="tabs-tab-2" role="tab">Python</button>
+                              <button class="border-b py-3 transition ui-not-focus-visible:outline-none border-transparent text-zinc-400 hover:text-zinc-300" aria-label="tabs-tab-3" role="tab">PHP</button>
+                            </div>
+                          </div>
+                          <div class="flex h-9 items-center gap-2 border-y border-b-white/7.5 border-t-transparent bg-white/2.5 bg-zinc-900 px-4 dark:border-b-white/5 dark:bg-white/1">
+                            <div class="dark flex">
+                              <span class="font-mono text-[0.625rem] font-semibold leading-6 text-emerald-500 dark:text-emerald-400">GET</span>
+                            </div>
+                            <span class="h-0.5 w-0.5 rounded-full bg-zinc-500"></span>
+                            <span class="font-mono text-xs text-zinc-400">/v1/groups/L7cGNIBKZiNJ6wqF</span>
+                          </div>
+                          <div>
+                            <div aria-label="tabs-tab-0" role="tabpanel">
+                              <div class="group w-full dark:bg-white/2.5">
+                                <div class="relative">
+                                  <pre class="flex flex-col overflow-x-auto p-4 text-xs text-white pre">
+                                    <span style="color: var(--shiki-token-function)">curl <span style="color: var(--shiki-token-string)">https://api.protocol.chat/v1/groups/L7cGNIBKZiNJ6wqF</span><span style="color: var(--shiki-color-text)"> \</span></span>
+                                    <span class="pl-3"><span style="color: var(--shiki-token-string)">-H "Authorization: Bearer {token}"</span><span style="color: var(--shiki-color-text)"> \</span></span>
+                                  </pre>
+                                  <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                                    <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                                      <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                        <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                                      </svg>
+                                      Copy
+                                    </span>
+                                    <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div aria-label="tabs-tab-1" class="hidden" role="tabpanel">
+                              <div class="group w-full dark:bg-white/2.5">
+                                <div class="relative">
+                                  <pre class="flex flex-col gap-3 overflow-x-auto p-4 text-xs text-white pre">
+                                    <span><span style="color: var(--shiki-token-keyword)">import</span><span style="color: var(--shiki-color-text)"> ApiClient </span><span style="color: var(--shiki-token-keyword)">from</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">'@example/protocol-api'</span></span>
+                                    <span></span>
+                                    <span><span style="color: var(--shiki-token-keyword)">const</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-constant)">client</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-keyword)">=</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-keyword)">new</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-function)">ApiClient</span><span style="color: var(--shiki-color-text)">(token)</span></span>
+                                    <span></span>
+                                    <span><span style="color: var(--shiki-token-keyword)">await</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-constant)">client</span><span style="color: var(--shiki-token-function)">.</span><span style="color: var(--shiki-token-constant)">groups</span><span style="color: var(--shiki-token-function)">.get</span><span style="color: var(--shiki-color-text)">(</span><span style="color: var(--shiki-token-string-expression)">'L7cGNIBKZiNJ6wqF'</span><span style="color: var(--shiki-color-text)">)</span></span>
+                                  </pre>
+                                  <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                                    <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                                      <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                        <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                                      </svg>
+                                      Copy
+                                    </span>
+                                    <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div aria-label="tabs-tab-2" class="hidden" role="tabpanel">
+                              <div class="group w-full dark:bg-white/2.5">
+                                <div class="relative">
+                                  <pre class="flex flex-col gap-3 overflow-x-auto p-4 text-xs text-white pre">
+                                    <span><span style="color: var(--shiki-token-keyword)">from</span><span style="color: var(--shiki-color-text)"> protocol_api </span><span style="color: var(--shiki-token-keyword)">import</span><span style="color: var(--shiki-color-text)"> ApiClient</span></span>
+                                    <span></span>
+                                    <span><span style="color: var(--shiki-color-text)">client </span><span style="color: var(--shiki-token-keyword)">=</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-function)">ApiClient</span><span style="color: var(--shiki-token-punctuation)">(token)</span></span>
+                                    <span></span>
+                                    <span><span style="color: var(--shiki-color-text)">client</span><span style="color: var(--shiki-token-punctuation)">.</span><span style="color: var(--shiki-color-text)">groups</span><span style="color: var(--shiki-token-punctuation)">.</span><span style="color: var(--shiki-token-function)">get</span><span style="color: var(--shiki-token-punctuation)">(</span><span style="color: var(--shiki-token-string-expression)">"L7cGNIBKZiNJ6wqF"</span><span style="color: var(--shiki-token-punctuation)">)</span></span>
+                                  </pre>
+                                  <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                                    <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                                      <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                        <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                                      </svg>
+                                      Copy
+                                    </span>
+                                    <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div aria-label="tabs-tab-3" class="hidden" role="tabpanel">
+                              <div class="group w-full dark:bg-white/2.5">
+                                <div class="relative">
+                                  <pre class="flex flex-col gap-3 overflow-x-auto p-4 text-xs text-white pre">
+                                    <span><span style="color: var(--shiki-color-text)">$client </span><span style="color: var(--shiki-token-keyword)">=</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-keyword)">new</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-punctuation)">\</span><span style="color: var(--shiki-token-constant)">Protocol</span><span style="color: var(--shiki-token-punctuation)">\</span><span style="color: var(--shiki-token-constant)">ApiClient</span><span style="color: var(--shiki-color-text)">($token);</span></span>
+                                    <span></span>
+                                    <span><span style="color: var(--shiki-color-text)">$client</span><span style="color: var(--shiki-token-keyword)">-&gt;</span><span style="color: var(--shiki-color-text)">groups</span><span style="color: var(--shiki-token-keyword)">-&gt;</span><span style="color: var(--shiki-token-function)">get</span><span style="color: var(--shiki-token-punctuation)">(</span><span style="color: var(--shiki-token-string-expression)">'L7cGNIBKZiNJ6wqF'</span><span style="color: var(--shiki-token-punctuation)">)</span><span style="color: var(--shiki-color-text)">;</span></span>
+                                  </pre>
+                                  <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                                    <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                                      <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                        <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                                      </svg>
+                                      Copy
+                                    </span>
+                                    <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
+                        <div class="not-porse">
+                          <div class="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 dark:border-zinc-800 dark:bg-transparent">
+                            <h3 class="mr-auto m-0 pt-3 text-xs font-semibold text-white">Response</h3>
+                          </div>
+                          <div class="group dark:bg-white/2.5">
+                            <div class="relative" role="tabpanel">
+                              <pre class="flex flex-col overflow-x-auto p-4 text-xs text-white pre">
+                                <span><span style="color: var(--shiki-color-text)">    {</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"id"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"l7cGNIBKZiNJ6wqF"</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"name"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Plaza Hotel"</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"description"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"World-renowned."</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"avatar_url"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"https://assets.protocol.chat/avatars/plazahotel.jpg"</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"conversation_id"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"ZYjVAbCE9g5XRlra"</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"contacts"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> [</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        {</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-keyword)">"username"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Hector"</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-comment)">// ...</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        }</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        {</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-keyword)">"username"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Cedric"</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-comment)">// ...</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        }</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        {</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-keyword)">"username"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Hester"</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-comment)">// ...</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        }</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        {</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-keyword)">"username"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Cliff"</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-comment)">// ...</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        }</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      ]</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"created_at"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-constant)">692233200</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"archived_at"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-constant)">null</span></span>
+                                <span><span style="color: var(--shiki-color-text)">    }</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                              </pre>
+                              <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                                <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                                  <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                    <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                                  </svg>
+                                  Copy
+                                </span>
+                                <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Retrieve a conversation end -->
+                <hr>
+
+                <!-- Update a group start -->
+                <div class="xl:max-w-none" id="update-a-group">
+                  <div class="flex items-center gap-x-3">
+                    <span class="font-mono text-[0.625rem] font-semibold leading-6 rounded-lg px-1.5 ring-1 ring-inset ring-amber-300 bg-amber-400/10 text-amber-500 dark:ring-amber-400/30 dark:bg-amber-400/10 dark:text-amber-400">PUT</span>
+                    <span class="h-0.5 w-0.5 rounded-full bg-zinc-300 dark:bg-zinc-600"></span>
+                    <span class="font-mono text-xs text-zinc-400">/v1/groups/:id</span>
+                  </div>
+                  <h2 class="mt-2 scroll-mt-24">
+                    <a class="group text-inherit no-underline hover:text-inherit" href="#update-a-group">
+                      <div class="absolute ml-[calc(-1*var(--width))] mt-1 hidden w-[var(--width)] opacity-0 transition [--width:calc(2.625rem+0.5px+50%-min(50%,calc(theme(maxWidth.lg)+theme(spacing.8))))] group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50 2xl:[--width:theme(spacing.10)]">
+                        <div class="group/anchor block h-5 w-5 rounded-lg bg-zinc-50 ring-1 ring-inset ring-zinc-300 transition hover:ring-zinc-500 dark:bg-zinc-800 dark:ring-zinc-700 dark:hover:bg-zinc-700 dark:hover:ring-zinc-600">
+                          <svg viewBox="0 0 20 20" fill="none" stroke-linecap="round" aria-hidden="true" class="h-5 w-5 stroke-zinc-500 transition dark:stroke-zinc-400 dark:group-hover/anchor:stroke-white"><path d="m6.5 11.5-.964-.964a3.535 3.535 0 1 1 5-5l.964.964m2 2 .964.964a3.536 3.536 0 0 1-5 5L8.5 13.5m0-5 3 3"></path></svg>
+                        </div>
+                      </div>
+                      <span>Update a group</span>
+                    </a>
+                  </h2>
+                  <div class="grid grid-cols-1 items-start gap-x-16 gap-y-10 xl:max-w-none xl:grid-cols-2">
+                    <div class="[&>:first-child]:mt-0 [&>:last-child]:mb-0">
+                      <p>
+                        This endpoint allows you to perform an update on a group. Examples of updates are changing the name, description, and avatar or adding and removing contacts from the group.
+                      </p>
+                      <h3>Optional attributes</h3>
+                      <div class="my-6">
+                        <ul role="list" class="m-0 max-w-[calc(theme(maxWidth.lg)-theme(spacing.8))] list-none divide-y divide-zinc-900/5 p-0 dark:divide-white/5">
+                          <li class="m-0 px-0 py-4 first:pt-0 last:pb-0">
+                            <dl class="m-0 flex flex-wrap items-center gap-x-3 gap-y-2"><dt class="sr-only">Name</dt><dd><code>name</code></dd><dt class="sr-only">Type</dt><dd class="font-mono text-xs text-zinc-400 dark:text-zinc-500">string</dd><dt class="sr-only">Description</dt><dd class="w-full flex-none [&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0"><p>The new name for the group.</p></dd></dl>
+                          </li>
+                          <li class="m-0 px-0 py-4 first:pt-0 last:pb-0">
+                            <dl class="m-0 flex flex-wrap items-center gap-x-3 gap-y-2"><dt class="sr-only">Name</dt><dd><code>description</code></dd><dt class="sr-only">Type</dt><dd class="font-mono text-xs text-zinc-400 dark:text-zinc-500">string</dd><dt class="sr-only">Description</dt><dd class="w-full flex-none [&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0"><p>The new description for the group.</p></dd></dl>
+                          </li>
+                          <li class="m-0 px-0 py-4 first:pt-0 last:pb-0">
+                            <dl class="m-0 flex flex-wrap items-center gap-x-3 gap-y-2"><dt class="sr-only">Name</dt><dd><code>avatar_url</code></dd><dt class="sr-only">Type</dt><dd class="font-mono text-xs text-zinc-400 dark:text-zinc-500">string</dd><dt class="sr-only">Description</dt><dd class="w-full flex-none [&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0"><p>The new avatar image URL for the group.</p></dd></dl>
+                          </li>
+                          <li class="m-0 px-0 py-4 first:pt-0 last:pb-0">
+                            <dl class="m-0 flex flex-wrap items-center gap-x-3 gap-y-2"><dt class="sr-only">Name</dt><dd><code>contacts</code></dd><dt class="sr-only">Type</dt><dd class="font-mono text-xs text-zinc-400 dark:text-zinc-500">array</dd><dt class="sr-only">Description</dt><dd class="w-full flex-none [&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0"><p>An array of contact objects that are members of the group.</p></dd></dl>
+                          </li>
+                          <li class="m-0 px-0 py-4 first:pt-0 last:pb-0">
+                            <dl class="m-0 flex flex-wrap items-center gap-x-3 gap-y-2"><dt class="sr-only">Name</dt><dd><code>archived_at</code></dd><dt class="sr-only">Type</dt><dd class="font-mono text-xs text-zinc-400 dark:text-zinc-500">timestamp</dd><dt class="sr-only">Description</dt><dd class="w-full flex-none [&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0"><p>Timestamp of when the group was archived.</p></dd></dl>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="[&>:first-child]:mt-0 [&>:last-child]:mb-0 xl:sticky xl:top-24">
+                      <div class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
+                        <div class="not-porse tab-component">
+                          <div class="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 dark:border-zinc-800 dark:bg-transparent">
+                            <h3 class="mr-auto m-0 pt-3 text-xs font-semibold text-white">Request</h3>
+                            <div class="-mb-px flex gap-4 text-xs font-medium" role="tablist">
+                              <button class="border-b py-3 transition ui-not-focus-visible:outline-none border-emerald-500 text-emerald-400" aria-label="tabs-tab-0" role="tab">cURL</button>
+                              <button class="border-b py-3 transition ui-not-focus-visible:outline-none border-transparent text-zinc-400 hover:text-zinc-300" aria-label="tabs-tab-1" role="tab">JavaScript</button>
+                              <button class="border-b py-3 transition ui-not-focus-visible:outline-none border-transparent text-zinc-400 hover:text-zinc-300" aria-label="tabs-tab-2" role="tab">Python</button>
+                              <button class="border-b py-3 transition ui-not-focus-visible:outline-none border-transparent text-zinc-400 hover:text-zinc-300" aria-label="tabs-tab-3" role="tab">PHP</button>
+                            </div>
+                          </div>
+                          <div class="flex h-9 items-center gap-2 border-y border-b-white/7.5 border-t-transparent bg-white/2.5 bg-zinc-900 px-4 dark:border-b-white/5 dark:bg-white/1">
+                            <div class="dark flex">
+                              <span class="font-mono text-[0.625rem] font-semibold leading-6 text-amber-500">PUT</span>
+                            </div>
+                            <span class="h-0.5 w-0.5 rounded-full bg-zinc-500"></span>
+                            <span class="font-mono text-xs text-zinc-400">/v1/groups/L7cGNIBKZiNJ6wqF</span>
+                          </div>
+                          <div>
+                            <div aria-label="tabs-tab-0" role="tabpanel">
+                              <div class="group w-full dark:bg-white/2.5">
+                                <div class="relative">
+                                  <pre class="flex flex-col overflow-x-auto p-4 text-xs text-white pre">
+                                    <span><span style="color: var(--shiki-token-function)">curl</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string)">-X</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string)">PUT</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string)">https://api.protocol.chat/v1/groups/L7cGNIBKZiNJ6wqF</span><span style="color: var(--shiki-color-text)"> \</span></span>
+                                    <span class="pl-3"><span style="color: var(--shiki-token-string)">-H "Authorization: Bearer {token}"</span><span style="color: var(--shiki-color-text)"> \</span></span>
+                                    <span><span style="color: var(--shiki-color-text)">  </span><span style="color: var(--shiki-token-string)">-d</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string)">description=</span><span style="color: var(--shiki-token-string-expression)">"The finest in New York."</span></span>
+                                  </pre>
+                                  <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                                    <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                                      <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                        <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                                      </svg>
+                                      Copy
+                                    </span>
+                                    <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div aria-label="tabs-tab-1" class="hidden" role="tabpanel">
+                              <div class="group w-full dark:bg-white/2.5">
+                                <div class="relative">
+                                  <pre class="flex flex-col overflow-x-auto p-4 text-xs text-white pre">
+                                    <span><span style="color: var(--shiki-token-keyword)">import</span><span style="color: var(--shiki-color-text)"> ApiClient </span><span style="color: var(--shiki-token-keyword)">from</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">'@example/protocol-api'</span></span>
+                                    <span class="h-6"></span>
+                                    <span><span style="color: var(--shiki-token-keyword)">const</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-constant)">client</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-keyword)">=</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-keyword)">new</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-function)">ApiClient</span><span style="color: var(--shiki-color-text)">(token)</span></span>
+                                    <span class="h-6"></span>
+                                    <span><span style="color: var(--shiki-token-keyword)">await</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-constant)">client</span><span style="color: var(--shiki-token-function)">.</span><span style="color: var(--shiki-token-constant)">groups</span><span style="color: var(--shiki-token-function)">.update</span><span style="color: var(--shiki-color-text)">(</span><span style="color: var(--shiki-token-string-expression)">'SIuAFUNKdSYHZF2w'</span><span style="color: var(--shiki-token-punctuation)">,</span><span style="color: var(--shiki-color-text)"> {</span></span>
+                                    <span><span style="color: var(--shiki-color-text)">    description</span><span style="color: var(--shiki-token-keyword)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">'The finest in New York.'</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                    <span><span style="color: var(--shiki-color-text)">})</span></span>
+                                  </pre>
+                                  <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                                    <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                                      <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                        <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                                      </svg>
+                                      Copy
+                                    </span>
+                                    <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div aria-label="tabs-tab-2" class="hidden" role="tabpanel">
+                              <div class="group w-full dark:bg-white/2.5">
+                                <div class="relative">
+                                  <pre class="flex flex-col gap-3 overflow-x-auto p-4 text-xs text-white pre">
+                                    <span><span style="color: var(--shiki-token-keyword)">from</span><span style="color: var(--shiki-color-text)"> protocol_api </span><span style="color: var(--shiki-token-keyword)">import</span><span style="color: var(--shiki-color-text)"> ApiClient</span></span>
+                                    <span></span>
+                                    <span><span style="color: var(--shiki-color-text)">client </span><span style="color: var(--shiki-token-keyword)">=</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-function)">ApiClient</span><span style="color: var(--shiki-token-punctuation)">(token)</span></span>
+                                    <span></span>
+                                    <span><span style="color: var(--shiki-color-text)">client</span><span style="color: var(--shiki-token-punctuation)">.</span><span style="color: var(--shiki-color-text)">groups</span><span style="color: var(--shiki-token-punctuation)">.</span><span style="color: var(--shiki-token-function)">update</span><span style="color: var(--shiki-token-punctuation)">(</span><span style="color: var(--shiki-token-string-expression)">"L7cGNIBKZiNJ6wqF"</span><span style="color: var(--shiki-token-punctuation)">, description</span><span style="color: var(--shiki-token-keyword)">=</span><span style="color: var(--shiki-token-string-expression)">"The finest in New York."</span><span style="color: var(--shiki-token-punctuation)">)</span></span>
+                                  </pre>
+                                  <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                                    <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                                      <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                        <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                                      </svg>
+                                      Copy
+                                    </span>
+                                    <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div aria-label="tabs-tab-3" class="hidden" role="tabpanel">
+                              <div class="group w-full dark:bg-white/2.5">
+                                <div class="relative">
+                                  <pre class="flex flex-col overflow-x-auto p-4 text-xs text-white pre">
+                                    <span><span style="color: var(--shiki-color-text)">$client </span><span style="color: var(--shiki-token-keyword)">=</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-keyword)">new</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-punctuation)">\</span><span style="color: var(--shiki-token-constant)">Protocol</span><span style="color: var(--shiki-token-punctuation)">\</span><span style="color: var(--shiki-token-constant)">ApiClient</span><span style="color: var(--shiki-color-text)">($token);</span></span>
+                                    <span class="h-6"></span>
+                                    <span><span style="color: var(--shiki-color-text)">$client</span><span style="color: var(--shiki-token-keyword)">-&gt;</span><span style="color: var(--shiki-color-text)">messages</span><span style="color: var(--shiki-token-keyword)">-&gt;</span><span style="color: var(--shiki-token-function)">update</span><span style="color: var(--shiki-token-punctuation)">(</span><span style="color: var(--shiki-token-string-expression)">'SIuAFUNKdSYHZF2w'</span><span style="color: var(--shiki-token-punctuation)">,</span><span style="color: var(--shiki-color-text)"> [</span></span>
+                                    <span><span style="color: var(--shiki-color-text)">  </span><span style="color: var(--shiki-token-string-expression)">'description'</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-keyword)">=&gt;</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">'The finest in New York.'</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                    <span><span style="color: var(--shiki-color-text)">]</span><span style="color: var(--shiki-token-punctuation)">)</span><span style="color: var(--shiki-color-text)">;</span></span>
+                                  </pre>
+                                  <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                                    <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                                      <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                        <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                                      </svg>
+                                      Copy
+                                    </span>
+                                    <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
+                        <div class="not-porse">
+                          <div class="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 dark:border-zinc-800 dark:bg-transparent">
+                            <h3 class="mr-auto m-0 pt-3 text-xs font-semibold text-white">Response</h3>
+                          </div>
+                          <div class="group dark:bg-white/2.5">
+                            <div class="relative" role="tabpanel">
+                              <pre class="flex flex-col overflow-x-auto p-4 text-xs text-white pre">
+                                <span><span style="color: var(--shiki-color-text)">    {</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"id"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"l7cGNIBKZiNJ6wqF"</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"name"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Plaza Hotel"</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"description"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"World-renowned."</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"avatar_url"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"https://assets.protocol.chat/avatars/plazahotel.jpg"</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"conversation_id"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"ZYjVAbCE9g5XRlra"</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"contacts"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> [</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        {</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-keyword)">"username"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Hector"</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-comment)">// ...</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        }</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        {</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-keyword)">"username"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Cedric"</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-comment)">// ...</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        }</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        {</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-keyword)">"username"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Hester"</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-comment)">// ...</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        }</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        {</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-keyword)">"username"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Cliff"</span></span>
+                                <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-comment)">// ...</span></span>
+                                <span><span style="color: var(--shiki-color-text)">        }</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      ]</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"created_at"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-constant)">692233200</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"archived_at"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-constant)">null</span></span>
+                                <span><span style="color: var(--shiki-color-text)">    }</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+                              </pre>
+                              <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                                <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                                  <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                    <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                                  </svg>
+                                  Copy
+                                </span>
+                                <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Update a contact end -->
+                <hr>
+
+                <!-- Delete a group start -->
+                <div class="xl:max-w-none" id="delete-a-group">
+                  <div class="flex items-center gap-x-3">
+                    <span class="font-mono text-[0.625rem] font-semibold leading-6 rounded-lg px-1.5 ring-1 ring-inset ring-rose-200 bg-rose-50 text-red-500 dark:ring-rose-500/20 dark:bg-rose-400/10 dark:text-rose-400">DELETE</span>
+                    <span class="h-0.5 w-0.5 rounded-full bg-zinc-300 dark:bg-zinc-600"></span>
+                    <span class="font-mono text-xs text-zinc-400">/v1/groups/:id</span>
+                  </div>
+                  <h2 class="mt-2 scroll-mt-24">
+                    <a class="group text-inherit no-underline hover:text-inherit" href="#delete-a-group">
+                      <div class="absolute ml-[calc(-1*var(--width))] mt-1 hidden w-[var(--width)] opacity-0 transition [--width:calc(2.625rem+0.5px+50%-min(50%,calc(theme(maxWidth.lg)+theme(spacing.8))))] group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50 2xl:[--width:theme(spacing.10)]">
+                        <div class="group/anchor block h-5 w-5 rounded-lg bg-zinc-50 ring-1 ring-inset ring-zinc-300 transition hover:ring-zinc-500 dark:bg-zinc-800 dark:ring-zinc-700 dark:hover:bg-zinc-700 dark:hover:ring-zinc-600">
+                          <svg viewBox="0 0 20 20" fill="none" stroke-linecap="round" aria-hidden="true" class="h-5 w-5 stroke-zinc-500 transition dark:stroke-zinc-400 dark:group-hover/anchor:stroke-white"><path d="m6.5 11.5-.964-.964a3.535 3.535 0 1 1 5-5l.964.964m2 2 .964.964a3.536 3.536 0 0 1-5 5L8.5 13.5m0-5 3 3"></path></svg>
+                        </div>
+                      </div>
+                      <span>Delete a group</span>
+                    </a>
+                  </h2>
+                  <div class="grid grid-cols-1 items-start gap-x-16 gap-y-10 xl:max-w-none xl:grid-cols-2">
+                    <div class="[&>:first-child]:mt-0 [&>:last-child]:mb-0">
+                      <p>
+                        This endpoint allows you to delete groups. Note: This will permanently delete the group, including the messages — archive it instead if you want to be able to restore it later.
+                      </p>
+                    </div>
+                    <div class="[&>:first-child]:mt-0 [&>:last-child]:mb-0 xl:sticky xl:top-24">
+                      <div class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
+                        <div class="not-porse tab-component">
+                          <div class="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 dark:border-zinc-800 dark:bg-transparent">
+                            <h3 class="mr-auto m-0 pt-3 text-xs font-semibold text-white">Request</h3>
+                            <div class="-mb-px flex gap-4 text-xs font-medium" role="tablist">
+                              <button class="border-b py-3 transition ui-not-focus-visible:outline-none border-emerald-500 text-emerald-400" aria-label="tabs-tab-0" role="tab">cURL</button>
+                              <button class="border-b py-3 transition ui-not-focus-visible:outline-none border-transparent text-zinc-400 hover:text-zinc-300" aria-label="tabs-tab-1" role="tab">JavaScript</button>
+                              <button class="border-b py-3 transition ui-not-focus-visible:outline-none border-transparent text-zinc-400 hover:text-zinc-300" aria-label="tabs-tab-2" role="tab">Python</button>
+                              <button class="border-b py-3 transition ui-not-focus-visible:outline-none border-transparent text-zinc-400 hover:text-zinc-300" aria-label="tabs-tab-3" role="tab">PHP</button>
+                            </div>
+                          </div>
+                          <div class="flex h-9 items-center gap-2 border-y border-b-white/7.5 border-t-transparent bg-white/2.5 bg-zinc-900 px-4 dark:border-b-white/5 dark:bg-white/1">
+                            <div class="dark flex">
+                              <span class="font-mono text-[0.625rem] font-semibold leading-6 text-red-500 dark:text-rose-500">DELETE</span>
+                            </div>
+                            <span class="h-0.5 w-0.5 rounded-full bg-zinc-500"></span>
+                            <span class="font-mono text-xs text-zinc-400">/v1/groups/L7cGNIBKZiNJ6wqF</span>
+                          </div>
+                          <div>
+                            <div aria-label="tabs-tab-0" role="tabpanel">
+                              <div class="group w-full dark:bg-white/2.5">
+                                <div class="relative">
+                                  <pre class="flex flex-col overflow-x-auto p-4 text-xs text-white pre">
+                                    <span><span style="color: var(--shiki-token-function)">curl</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string)">-X</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string)">DELETE</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string)">https://api.protocol.chat/v1/groups/L7cGNIBKZiNJ6wqF</span><span style="color: var(--shiki-color-text)"> \</span></span>
+                                    <span><span style="color: var(--shiki-color-text)">  </span><span style="color: var(--shiki-token-string)">-H</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Authorization: Bearer {token}"</span></span>
+                                  </pre>
+                                  <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                                    <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                                      <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                        <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                                      </svg>
+                                      Copy
+                                    </span>
+                                    <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div aria-label="tabs-tab-1" class="hidden" role="tabpanel">
+                              <div class="group w-full dark:bg-white/2.5">
+                                <div class="relative">
+                                  <pre class="flex flex-col gap-3 overflow-x-auto p-4 text-xs text-white pre">
+                                    <span><span style="color: var(--shiki-token-keyword)">import</span><span style="color: var(--shiki-color-text)"> ApiClient </span><span style="color: var(--shiki-token-keyword)">from</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">'@example/protocol-api'</span></span>
+                                    <span></span>
+                                    <span><span style="color: var(--shiki-token-keyword)">const</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-constant)">client</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-keyword)">=</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-keyword)">new</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-function)">ApiClient</span><span style="color: var(--shiki-color-text)">(token)</span></span>
+                                    <span></span>
+                                    <span><span style="color: var(--shiki-token-keyword)">await</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-constant)">client</span><span style="color: var(--shiki-token-function)">.</span><span style="color: var(--shiki-token-constant)">groups</span><span style="color: var(--shiki-token-function)">.delete</span><span style="color: var(--shiki-color-text)">(</span><span style="color: var(--shiki-token-string-expression)">'L7cGNIBKZiNJ6wqF'</span><span style="color: var(--shiki-color-text)">)</span></span>
+                                  </pre>
+                                  <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                                    <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                                      <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                        <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                                      </svg>
+                                      Copy
+                                    </span>
+                                    <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div aria-label="tabs-tab-2" class="hidden" role="tabpanel">
+                              <div class="group w-full dark:bg-white/2.5">
+                                <div class="relative">
+                                  <pre class="flex flex-col gap-3 overflow-x-auto p-4 text-xs text-white pre">
+                                    <span><span style="color: var(--shiki-token-keyword)">from</span><span style="color: var(--shiki-color-text)"> protocol_api </span><span style="color: var(--shiki-token-keyword)">import</span><span style="color: var(--shiki-color-text)"> ApiClient</span></span>
+                                    <span></span>
+                                    <span><span style="color: var(--shiki-color-text)">client </span><span style="color: var(--shiki-token-keyword)">=</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-function)">ApiClient</span><span style="color: var(--shiki-token-punctuation)">(token)</span></span>
+                                    <span></span>
+                                    <span><span style="color: var(--shiki-color-text)">client</span><span style="color: var(--shiki-token-punctuation)">.</span><span style="color: var(--shiki-color-text)">groups</span><span style="color: var(--shiki-token-punctuation)">.</span><span style="color: var(--shiki-token-function)">delete</span><span style="color: var(--shiki-token-punctuation)">(</span><span style="color: var(--shiki-token-string-expression)">"L7cGNIBKZiNJ6wqF"</span><span style="color: var(--shiki-token-punctuation)">)</span></span>
+                                  </pre>
+                                  <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                                    <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                                      <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                        <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                                      </svg>
+                                      Copy
+                                    </span>
+                                    <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div aria-label="tabs-tab-3" class="hidden" role="tabpanel">
+                              <div class="group w-full dark:bg-white/2.5">
+                                <div class="relative">
+                                  <pre class="flex flex-col gap-3 overflow-x-auto p-4 text-xs text-white pre">
+                                    <span><span style="color: var(--shiki-color-text)">$client </span><span style="color: var(--shiki-token-keyword)">=</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-keyword)">new</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-punctuation)">\</span><span style="color: var(--shiki-token-constant)">Protocol</span><span style="color: var(--shiki-token-punctuation)">\</span><span style="color: var(--shiki-token-constant)">ApiClient</span><span style="color: var(--shiki-color-text)">($token);</span></span>
+                                    <span></span>
+                                    <span><span style="color: var(--shiki-color-text)">$client</span><span style="color: var(--shiki-token-keyword)">-&gt;</span><span style="color: var(--shiki-color-text)">groups</span><span style="color: var(--shiki-token-keyword)">-&gt;</span><span style="color: var(--shiki-token-function)">delete</span><span style="color: var(--shiki-token-punctuation)">(</span><span style="color: var(--shiki-token-string-expression)">'L7cGNIBKZiNJ6wqF'</span><span style="color: var(--shiki-token-punctuation)">)</span><span style="color: var(--shiki-color-text)">;</span></span>
+                                  </pre>
+                                  <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                                    <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                                      <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                        <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                                      </svg>
+                                      Copy
+                                    </span>
+                                    <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Delete a contact end -->
               </div>
 
               <!-- article footer start -->
@@ -295,7 +1296,7 @@
                   <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" class="mt-0.5 h-5 w-5 -ml-1 rotate-180"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m11.5 6.5 3 3.5m0 0-3 3.5m3-3.5h-9"></path></svg>
                   Previous
                 </button>
-                <a href="pagintion.html" tabIndex="-1" aria-hidden="true" class="text-base font-semibold text-zinc-900 transition hover:text-zinc-600 dark:text-white dark:hover:text-zinc-300">Pagination</a>
+                <a href="messages.html" tabIndex="-1" aria-hidden="true" class="text-base font-semibold text-zinc-900 transition hover:text-zinc-600 dark:text-white dark:hover:text-zinc-300">Messages</a>
               </div>
               <!-- Next Page Button -->
               <div class="ml-auto flex flex-col items-end gap-3">
@@ -305,7 +1306,7 @@
                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" d="m11.5 6.5 3 3.5m0 0-3 3.5m3-3.5h-9"></path>
                   </svg>
                 </button>
-                <a href="webhooks.html" tabIndex="-1" aria-hidden="true" class="text-base font-semibold text-zinc-900 transition hover:text-zinc-600 dark:text-white dark:hover:text-zinc-300">Webhooks</a>
+                <a href="attachments.html" tabIndex="-1" aria-hidden="true" class="text-base font-semibold text-zinc-900 transition hover:text-zinc-600 dark:text-white dark:hover:text-zinc-300">Attachments</a>
               </div>
             </div>
             <!-- Small Print -->
@@ -344,3 +1345,32 @@
 
   <script src="js/main.js"></script>
 </html>
+
+
+<!-- <span><span style="color: var(--shiki-color-text)">    {</span></span>
+  <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"id"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"l7cGNIBKZiNJ6wqF"</span></span>
+  <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"name"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Plaza Hotel"</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+  <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"description"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"World-renowned."</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+  <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"avatar_url"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"https://assets.protocol.chat/avatars/plazahotel.jpg"</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+  <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"conversation_id"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"ZYjVAbCE9g5XRlra"</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+  <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"contacts"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> [</span></span>
+  <span><span style="color: var(--shiki-color-text)">        {</span></span>
+  <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-keyword)">"username"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Hector"</span></span>
+  <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-comment)">// ...</span></span>
+  <span><span style="color: var(--shiki-color-text)">        }</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+  <span><span style="color: var(--shiki-color-text)">        {</span></span>
+  <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-keyword)">"username"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Cedric"</span></span>
+  <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-comment)">// ...</span></span>
+  <span><span style="color: var(--shiki-color-text)">        }</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+  <span><span style="color: var(--shiki-color-text)">        {</span></span>
+  <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-keyword)">"username"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Hester"</span></span>
+  <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-comment)">// ...</span></span>
+  <span><span style="color: var(--shiki-color-text)">        }</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+  <span><span style="color: var(--shiki-color-text)">        {</span></span>
+  <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-keyword)">"username"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Cliff"</span></span>
+  <span><span style="color: var(--shiki-color-text)">          </span><span style="color: var(--shiki-token-comment)">// ...</span></span>
+  <span><span style="color: var(--shiki-color-text)">        }</span></span>
+  <span><span style="color: var(--shiki-color-text)">      ]</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+  <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"created_at"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-constant)">692233200</span><span style="color: var(--shiki-token-punctuation)">,</span></span>
+  <span><span style="color: var(--shiki-color-text)">      </span><span style="color: var(--shiki-token-keyword)">"archived_at"</span><span style="color: var(--shiki-token-punctuation)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-constant)">null</span></span>
+  <span><span style="color: var(--shiki-color-text)">    }</span><span style="color: var(--shiki-token-punctuation)">,</span></span> -->
