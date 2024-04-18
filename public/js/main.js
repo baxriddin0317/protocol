@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let moonIcon = document.getElementById("moon-icon");
   let themeToggle = document.getElementById("theme-toggle");
 
-  // On page load or when changing themes
   if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
     document.documentElement.classList.add("dark");
     sunIcon.classList.add("hidden");
@@ -14,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
     moonIcon.classList.add("hidden");
   }
 
-  // Toggle the icon and theme on click
   themeToggle.addEventListener("click", function () {
     if (sunIcon.classList.contains("hidden")) {
       sunIcon.classList.remove("hidden");
@@ -51,4 +49,53 @@ document.addEventListener("DOMContentLoaded", function() {
 
   yesButton.addEventListener("click", onSubmit);
   noButton.addEventListener("click", onSubmit);
+});
+
+// copy function
+function handleCopyButtonClick(event) {
+  const button = event.currentTarget;
+  const panel = button.closest('[role="tabpanel"]');
+
+  if (!panel) {
+    console.error('Unable to find parent panel.');
+    return;
+  }
+
+  const preElement = panel.querySelector('.pre');
+
+  if (!preElement) {
+    console.error('Unable to find pre element inside panel.1');
+    return;
+  }
+  
+  const panelContent = preElement.textContent;
+  
+  navigator.clipboard.writeText(panelContent).then(() => {
+    const copiedMessage = button.querySelector('.copied-message');
+    const copy = button.querySelector('.copy');
+    if (copiedMessage) {
+      button.classList.add('bg-emerald-400/10')
+      button.classList.add('ring-1')
+      button.classList.add('ring-emerald-400/20')
+      copiedMessage.classList.remove('hidden');
+      copiedMessage.classList.add('flex');
+      copy.classList.add('hidden');
+      setTimeout(() => {
+        button.classList.remove('bg-emerald-400/10')
+        button.classList.remove('ring-1')
+        button.classList.remove('ring-emerald-400/20')
+        copiedMessage.classList.add('hidden');
+        copy.classList.remove('hidden');
+      }, 2000);
+    } else {
+      console.error('Unable to find copied message element.');
+    }
+  }).catch(err => {
+    console.error('Failed to copy: ', err);
+  });
+}
+
+const copyButtons = document.querySelectorAll('.group-button');
+copyButtons.forEach(copyButton => {
+  copyButton.addEventListener('click', handleCopyButtonClick);
 });

@@ -165,14 +165,14 @@
                           <span class="truncate">Authentication</span>
                         </a>
                         <div>
-                          <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#choose-your-client">
-                            <span class="truncate">Choose your client</span>
+                          <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#basic-authentication">
+                            <span class="truncate">Basic authentication</span>
                           </a>
-                          <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#resources">
-                            <span class="truncate">Making your first API request</span>
+                          <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#o-auth2-with-bearer-token">
+                            <span class="truncate">OAuth2 with bearer token</span>
                           </a>
-                          <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#resources">
-                            <span class="truncate">What's next?</span>
+                          <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#using-an-sdk">
+                            <span class="truncate">Using an SDK</span>
                           </a>
                         </div>
                       </li>
@@ -251,7 +251,7 @@
                 <!-- content end -->
 
                 <!-- Basic authentication start -->
-                <div class="my-16 xl:max-w-none" id="basic-authentication">
+                <div class="my-16" id="basic-authentication">
                   <h2 class="scroll-mt-24">
                     <a class="group text-inherit no-underline hover:text-inherit" href="#basic-authentication">
                       <div class="absolute ml-[calc(-1*var(--width))] mt-1 hidden w-[var(--width)] opacity-0 transition [--width:calc(2.625rem+0.5px+50%-min(50%,calc(theme(maxWidth.lg)+theme(spacing.8))))] group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50 2xl:[--width:theme(spacing.10)]">
@@ -265,6 +265,32 @@
                   <p>
                     With basic authentication, you use your username and password to authenticate your HTTP requests. Unless you have a very good reason, you probably shouldn't use basic auth. Here's how to authenticate using cURL:
                   </p>
+                  <!-- code start -->
+                  <div class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
+                    <div class="not-porse">
+                      <div class="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 dark:border-zinc-800 dark:bg-transparent">
+                        <h3 class="mr-auto m-0 pt-3 text-xs font-semibold text-white">Example request with basic auth</h3>
+                      </div>
+                      <div class="group dark:bg-white/2.5">
+                        <div class="relative" role="tabpanel">
+                          <pre class="flex flex-col overflow-x-auto p-4 text-xs text-white pre">
+                            <span><span style="color: var(--shiki-token-function)">curl</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string)">https://api.protocol.chat/v1/conversations</span><span style="color: var(--shiki-color-text)"> \</span></span>
+                            <span><span style="color: var(--shiki-color-text)">  </span><span style="color: var(--shiki-token-string)">-u</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string)">username:password</span></span>
+                          </pre>
+                          <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                            <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                              <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                              </svg>
+                              Copy
+                            </span>
+                            <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- code end -->
                   <p>
                     Please don't commit your Protocol password to GitHub!
                   </p>
@@ -273,7 +299,7 @@
                 <!-- Basic authentication end -->
 
                 <!-- OAuth2 with bearer token start -->
-                <div class="my-16 xl:max-w-none" id="o-auth2-with-bearer-token">
+                <div class="my-16" id="o-auth2-with-bearer-token">
                   <h2 class="scroll-mt-24">
                     <a class="group text-inherit no-underline hover:text-inherit" href="#o-auth2-with-bearer-token">
                       <div class="absolute ml-[calc(-1*var(--width))] mt-1 hidden w-[var(--width)] opacity-0 transition [--width:calc(2.625rem+0.5px+50%-min(50%,calc(theme(maxWidth.lg)+theme(spacing.8))))] group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50 2xl:[--width:theme(spacing.10)]">
@@ -287,6 +313,32 @@
                   <p>
                     The recommended way to authenticate with the Protocol API is by using OAuth2. When establishing a connection using OAuth2, you will need your access token — you will find it in the <a href="#">Protocol dashboard</a> under API settings. Here's how to add the token to the request header using cURL:
                   </p>
+                  <!-- code start -->
+                  <div class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
+                    <div class="not-porse">
+                      <div class="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 dark:border-zinc-800 dark:bg-transparent">
+                        <h3 class="mr-auto m-0 pt-3 text-xs font-semibold text-white">Example request with bearer token</h3>
+                      </div>
+                      <div class="group dark:bg-white/2.5">
+                        <div class="relative" role="tabpanel">
+                          <pre class="flex flex-col overflow-x-auto p-4 text-xs text-white pre">
+                            <span><span style="color: var(--shiki-token-function)">curl</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string)">https://api.protocol.chat/v1/conversations</span><span style="color: var(--shiki-color-text)"> \</span></span>
+                            <span><span style="color: var(--shiki-color-text)">  </span><span style="color: var(--shiki-token-string)">-H</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"Authorization: Bearer {token}"</span></span>
+                          </pre>
+                          <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                            <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                              <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                              </svg>
+                              Copy
+                            </span>
+                            <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- code end -->
                   <p>
                     Always keep your token safe and reset it if you suspect it has been compromised.
                   </p>
@@ -295,7 +347,7 @@
                 <!-- OAuth2 with bearer token end -->
 
                 <!-- Using an SDK start -->
-                <div class="my-16 xl:max-w-none" id="using-an-sdk">
+                <div class="my-16" id="using-an-sdk">
                   <h2 class="scroll-mt-24">
                     <a class="group text-inherit no-underline hover:text-inherit" href="#using-an-sdk">
                       <div class="absolute ml-[calc(-1*var(--width))] mt-1 hidden w-[var(--width)] opacity-0 transition [--width:calc(2.625rem+0.5px+50%-min(50%,calc(theme(maxWidth.lg)+theme(spacing.8))))] group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50 2xl:[--width:theme(spacing.10)]">
@@ -403,5 +455,6 @@
   </body>
 
   <script src="js/main.js"></script>
+  <script src="js/authentication.js"></script>
 
 </html>
