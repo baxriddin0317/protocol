@@ -251,6 +251,135 @@
             </nav>
           </div>
         </header>
+
+        <!-- mobile menu -->
+        <div id="mobileMenu" class="lg:hidden fixed inset-0 -left-full size-full z-40 bg-black/90 transition-all">
+          <!-- navigation -->
+          <nav class="absolute bottom-0 left-0 top-14 w-full overflow-y-auto bg-white px-4 pb-4 pt-6 shadow-lg shadow-zinc-900/10 ring-1 ring-zinc-900/7.5 min-[416px]:max-w-sm sm:px-6 sm:pb-10 dark:bg-zinc-900 dark:ring-zinc-800">
+            <ul class="list">
+              <li class="md:hidden">
+                <a href="/" class="text-sm leading-5 text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white">API</a>
+              </li>
+              <li class="md:hidden">
+                <a href="/" class="text-sm leading-5 text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white">Documentation</a>
+              </li>
+              <li class="md:hidden">
+                <a href="/" class="text-sm leading-5 text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white">Support</a>
+              </li>
+              <li class="relative mt-6 md:mt-0">
+                <h2 class="text-xs font-semibold text-zinc-900 dark:text-white">
+                  Guides
+                </h2>
+                <div class="relative mt-3 pl-2">
+                  <div class="absolute inset-y-0 left-2 w-px bg-zinc-900/10 dark:bg-white/5" style="transform: none; transform-origin: 50% 50% 0px;"></div>
+                  <ul class="border-l border-transparent">
+                    <li class="relative">
+                      <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="index.html">
+                        <span class="truncate">Introduction</span>
+                      </a>
+                    </li>
+                    <li class="relative">
+                      <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="quickstart.html">
+                        <span class="truncate">Quickstart</span>
+                      </a>
+                    </li>
+                    <li class="relative">
+                      <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="sdks.html">
+                        <span class="truncate">SDKs</span>
+                      </a>
+                    </li>
+                    <li class="relative">
+                      <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="authentication.html">
+                        <span class="truncate">Authentication</span>
+                      </a>
+                    </li>
+                    <li class="relative">
+                      <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="pagintion.html">
+                        <span class="truncate">Pagination</span>
+                      </a>
+                    </li>
+                    <li class="relative">
+                      <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="errors.html">
+                        <span class="truncate">Errors</span>
+                      </a>
+                    </li>
+                    <li class="relative">
+                      <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="webhooks.html">
+                        <span class="truncate">Webhooks</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="relative mt-6">
+                <h2 class="text-xs font-semibold text-zinc-900 dark:text-white">
+                  Resources
+                </h2>
+                <div class="relative mt-3 pl-2">
+                  <div class="absolute inset-x-0 top-0 bg-zinc-800/2.5 will-change-transform dark:bg-white/2.5" style="height: 64px; top: 32px; border-radius: 8px; opacity: 1; transform: none; transform-origin: 50% 50% 0px;"></div>
+                  <div class="absolute inset-y-0 left-2 w-px bg-zinc-900/10 dark:bg-white/5" style="transform: none; transform-origin: 50% 50% 0px;"></div>
+                  <div class="absolute left-2 h-6 w-px bg-emerald-500" style="top: 36px; opacity: 1; transform: none; transform-origin: 50% 50% 0px;"></div>
+                  <ul class="border-l border-transparent">
+                    <li class="relative">
+                      <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-900 dark:text-white" href="contacts.html">
+                        <span class="truncate">Contacts</span>
+                      </a>
+                    </li>
+                    <li class="relative">
+                      <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="conversations.html">
+                        <span class="truncate">Conversations</span>
+                      </a>
+                      <div>
+                        <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#the-conversation-model">
+                          <span class="truncate">The conversation model</span>
+                        </a>
+                        <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#list-all-conversations">
+                          <span class="truncate">List all conversation</span>
+                          <span class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">GET</span>
+                        </a>
+                        <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#create-a-conversation">
+                          <span class="truncate">Create a conversation</span>
+                          <span class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">POST</span>
+                        </a>
+                        <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#retrieve-a-conversation">
+                          <span class="truncate">Retrieve a conversation</span>
+                          <span class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">GET</span>
+                        </a>
+                        <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#update-a-conversation">
+                          <span class="truncate">Update a conversation</span>
+                          <span class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">PUT</span>
+                        </a>
+                        <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#delete-a-conversation">
+                          <span class="truncate">Delete a conversation</span>
+                          <span class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">DELETE</span>
+                        </a>
+                      </div>
+                    </li>
+                    <li class="relative">
+                      <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="messages.html">
+                        <span class="truncate">Messages</span>
+                      </a>
+                    </li>
+                    <li class="relative">
+                      <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="groups.html">
+                        <span class="truncate">Groups</span>
+                      </a>
+                    </li>
+                    <li class="relative">
+                      <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="attachments.html">
+                        <span class="truncate">Attachments</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="sticky bottom-0 z-10 mt-6 min-[416px]:hidden">
+                <a class="inline-flex gap-0.5 justify-center overflow-hidden text-sm font-medium transition rounded-full bg-zinc-900 py-1 px-3 text-white hover:bg-zinc-700 dark:bg-emerald-500 dark:text-white dark:hover:bg-emerald-400 w-full" href="#">Sign in</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
         <!-- main -->
         <div class="relative flex h-full flex-col px-4 pt-14 sm:px-6 lg:px-8">
           <main class="flex-auto">

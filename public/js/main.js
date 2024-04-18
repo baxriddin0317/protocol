@@ -133,6 +133,14 @@ function initializeTabs(tabButtons, tabPanels) {
 
 document.addEventListener("DOMContentLoaded", function () {
   const tabComponents = document.querySelectorAll(".tab-component");
+  const mobileNavBtn = document.getElementById('mobileNavBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  mobileNavBtn.addEventListener('click', function () {
+    console.log('sa');
+    mobileMenu.classList.toggle('-left-full');
+    mobileMenu.classList.toggle('-left-0');
+  });
 
   tabComponents.forEach(function (tabComponent) {
     const tabButtons = tabComponent.querySelectorAll("[role='tab']");
