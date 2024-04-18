@@ -176,10 +176,10 @@
                           <span class="truncate">Errors</span>
                         </a>
                         <div>
-                          <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#guides">
+                          <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#status-codes">
                             <span class="truncate">Status codes</span>
                           </a>
-                          <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#resources">
+                          <a class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#error-types">
                             <span class="truncate">Error types</span>
                           </a>
                         </div>
@@ -239,7 +239,160 @@
           <main class="flex-auto">
             <article class="flex h-full flex-col pb-10 pt-16 dark:text-white">
               <div class="flex-auto prose dark:prose-invert [html_:where(&>*)]:mx-auto [html_:where(&>*)]:max-w-2xl [html_:where(&>*)]:lg:mx-[calc(50%-min(50%,theme(maxWidth.lg)))] [html_:where(&>*)]:lg:max-w-3xl">
-                
+                <!-- content start -->
+                <div class="w-full">
+                  <h1>Errors</h1>
+                  <p class="lead">
+                    In this guide, we will talk about what happens when something goes wrong while you work with the API. Mistakes happen, and mostly they will be yours, not ours. Let's look at some status codes and error types you might encounter.
+                  </p>
+                  <p>
+                    You can tell if your request was successful by checking the status code when receiving an API response. If a response comes back unsuccessful, you can use the error type and error message to figure out what has gone wrong and do some rudimentary debugging (before contacting support).
+                  </p>
+                  <!-- note -->
+                  <div class="my-6 flex gap-2.5 rounded-2xl border border-emerald-500/20 bg-emerald-50/50 p-4 leading-6 text-emerald-900 dark:border-emerald-500/30 dark:bg-emerald-500/5 dark:text-emerald-200 dark:[--tw-prose-links-hover:theme(colors.emerald.300)] dark:[--tw-prose-links:theme(colors.white)]">
+                    <svg viewBox="0 0 16 16" aria-hidden="true" class="mt-1 h-4 w-4 flex-none fill-emerald-500 stroke-white dark:fill-emerald-200/20 dark:stroke-emerald-200">
+                      <circle cx="8" cy="8" r="8" stroke-width="0"></circle><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.75 7.75h1.5v3.5"></path><circle cx="8" cy="4" r=".5" fill="none"></circle>
+                    </svg>
+                    <div class="[&>:first-child]:mt-0 [&>:last-child]:mb-0">
+                      <p>
+                        Before reaching out to support with an error, please be aware that 99% of all reported errors are, in fact, user errors. Therefore, please carefully check your code before contacting Protocol support.
+                      </p>
+                    </div>
+                  </div>
+                  <hr>
+                </div>
+                <!-- content end -->
+
+                <!-- Status codes start -->
+                <div id="status-codes">
+                  <h2 class="scroll-mt-24">
+                    <a class="group text-inherit no-underline hover:text-inherit" href="#status-codes">
+                      <div class="absolute ml-[calc(-1*var(--width))] mt-1 hidden w-[var(--width)] opacity-0 transition [--width:calc(2.625rem+0.5px+50%-min(50%,calc(theme(maxWidth.lg)+theme(spacing.8))))] group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50 2xl:[--width:theme(spacing.10)]">
+                        <div class="group/anchor block h-5 w-5 rounded-lg bg-zinc-50 ring-1 ring-inset ring-zinc-300 transition hover:ring-zinc-500 dark:bg-zinc-800 dark:ring-zinc-700 dark:hover:bg-zinc-700 dark:hover:ring-zinc-600">
+                          <svg viewBox="0 0 20 20" fill="none" stroke-linecap="round" aria-hidden="true" class="h-5 w-5 stroke-zinc-500 transition dark:stroke-zinc-400 dark:group-hover/anchor:stroke-white"><path d="m6.5 11.5-.964-.964a3.535 3.535 0 1 1 5-5l.964.964m2 2 .964.964a3.536 3.536 0 0 1-5 5L8.5 13.5m0-5 3 3"></path></svg>
+                        </div>
+                      </div>
+                      <span>Status codes</span>
+                    </a>
+                  </h2>
+                  <p>
+                    Here is a list of the different categories of status codes returned by the Protocol API. Use these to understand if a request was successful.
+                  </p>
+                  <div class="my-6">
+                    <ul class="m-0 max-w-[calc(theme(maxWidth.lg)-theme(spacing.8))] list-none divide-y divide-zinc-900/5 p-0 dark:divide-white/5">
+                      <li class="m-0 px-0 py-4 first:pt-0 last:pb-0">
+                        <dl class="m-0 flex flex-wrap items-center gap-x-3 gap-y-2">
+                          <dt class="sr-only">Name</dt>
+                          <dd><code>2xx</code></dd>
+                          <dt class="sr-only">Description</dt>
+                          <dd class="w-full flex-none [&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0">
+                            <p>A 2xx status code indicates a successful response.</p>
+                          </dd>
+                        </dl>
+                      </li>
+                      <li class="m-0 px-0 py-4 first:pt-0 last:pb-0">
+                        <dl class="m-0 flex flex-wrap items-center gap-x-3 gap-y-2">
+                          <dt class="sr-only">Name</dt>
+                          <dd><code>4xx</code></dd>
+                          <dt class="sr-only">Description</dt>
+                          <dd class="w-full flex-none [&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0">
+                            <p>A 4xx status code indicates a client error — this means it's a <em>you</em>
+                        problem.</p>
+                          </dd>
+                        </dl>
+                      </li>
+                      <li class="m-0 px-0 py-4 first:pt-0 last:pb-0">
+                        <dl class="m-0 flex flex-wrap items-center gap-x-3 gap-y-2">
+                          <dt class="sr-only">Name</dt>
+                          <dd><code>5xx</code></dd>
+                          <dt class="sr-only">Description</dt>
+                          <dd class="w-full flex-none [&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0">
+                            <p>A 5xx status code indicates a server error — you won't be seeing these.</p>
+                          </dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </div>
+                  <hr>
+                </div>
+                <!-- Status codes end -->
+
+                <!-- Error types start -->
+                <div class="xl:max-w-none" id="error-types">
+                  <h2 class="scroll-mt-24">
+                    <a class="group text-inherit no-underline hover:text-inherit" href="#error-types">
+                      <div class="absolute ml-[calc(-1*var(--width))] mt-1 hidden w-[var(--width)] opacity-0 transition [--width:calc(2.625rem+0.5px+50%-min(50%,calc(theme(maxWidth.lg)+theme(spacing.8))))] group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50 2xl:[--width:theme(spacing.10)]">
+                        <div class="group/anchor block h-5 w-5 rounded-lg bg-zinc-50 ring-1 ring-inset ring-zinc-300 transition hover:ring-zinc-500 dark:bg-zinc-800 dark:ring-zinc-700 dark:hover:bg-zinc-700 dark:hover:ring-zinc-600">
+                          <svg viewBox="0 0 20 20" fill="none" stroke-linecap="round" aria-hidden="true" class="h-5 w-5 stroke-zinc-500 transition dark:stroke-zinc-400 dark:group-hover/anchor:stroke-white"><path d="m6.5 11.5-.964-.964a3.535 3.535 0 1 1 5-5l.964.964m2 2 .964.964a3.536 3.536 0 0 1-5 5L8.5 13.5m0-5 3 3"></path></svg>
+                        </div>
+                      </div>
+                      <span>Error types</span>
+                    </a>
+                  </h2>
+                  <div class="grid grid-cols-1 items-start gap-x-16 gap-y-10 xl:max-w-none xl:grid-cols-2">
+                    <div class="[&>:first-child]:mt-0 [&>:last-child]:mb-0">
+                      <p>
+                        Whenever a request is unsuccessful, the Protocol API will return an error response with an error type and message. You can use this information to understand better what has gone wrong and how to fix it. Most of the error messages are pretty helpful and actionable.
+                      </p>
+                      <p>
+                        Here is a list of the two error types supported by the Protocol API — use these to understand what you have done wrong.
+                      </p>
+                      <div class="my-6">
+                        <ul class="m-0 max-w-[calc(theme(maxWidth.lg)-theme(spacing.8))] list-none divide-y divide-zinc-900/5 p-0 dark:divide-white/5">
+                          <li class="m-0 px-0 py-4 first:pt-0 last:pb-0">
+                            <dl class="m-0 flex flex-wrap items-center gap-x-3 gap-y-2">
+                              <dt class="sr-only">Name</dt>
+                              <dd><code>api_error</code></dd><dt class="sr-only">Description</dt>
+                              <dd class="w-full flex-none [&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0">
+                                <p>This means that we made an error, which is highly speculative and unlikely.</p>
+                              </dd>
+                            </dl>
+                          </li>
+                          <li class="m-0 px-0 py-4 first:pt-0 last:pb-0">
+                            <dl class="m-0 flex flex-wrap items-center gap-x-3 gap-y-2">
+                              <dt class="sr-only">Name</dt>
+                              <dd><code>invalid_request</code></dd>
+                              <dt class="sr-only">Description</dt>
+                              <dd class="w-full flex-none [&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0">
+                                <p>This means that you made an error, which is much more likely.</p>
+                              </dd>
+                            </dl>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="[&>:first-child]:mt-0 [&>:last-child]:mb-0">
+                      <div class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
+                        <div class="not-porse">
+                          <div class="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 dark:border-zinc-800 dark:bg-transparent">
+                            <h3 class="mr-auto m-0 pt-3 text-xs font-semibold text-white">Error response</h3>
+                          </div>
+                          <div class="group dark:bg-white/2.5">
+                            <div class="relative" role="tabpanel">
+                              <pre class="flex flex-col overflow-x-auto p-4 text-xs text-white pre">
+                                <span><span style="color: var(--shiki-color-text)">{</span></span>
+                                <span><span style="color: var(--shiki-color-text)">  </span><span style="color: var(--shiki-token-function)">"type"</span><span style="color: var(--shiki-token-function)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"api_error"</span><span style="color: var(--shiki-token-string)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">  </span><span style="color: var(--shiki-token-function)">"message"</span><span style="color: var(--shiki-token-function)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"No way this is happening!?"</span><span style="color: var(--shiki-token-string)">,</span></span>
+                                <span><span style="color: var(--shiki-color-text)">  </span><span style="color: var(--shiki-token-function)">"documentation_url"</span><span style="color: var(--shiki-token-function)">:</span><span style="color: var(--shiki-color-text)"> </span><span style="color: var(--shiki-token-string-expression)">"https://protocol.chat/docs/errors/api_error"</span></span>
+                                <span><span style="color: var(--shiki-color-text)">}</span></span>
+                              </pre>
+                              <button type="button" class="group-button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100 bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5">
+                                <span class="flex items-center gap-0.5 text-zinc-400 transition duration-300 copy">
+                                  <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400">
+                                    <path stroke-width="0" d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"></path><path fill="none" stroke-linejoin="round" d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"></path>
+                                  </svg>
+                                  Copy
+                                </span>
+                                <span class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">Copied!</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Error types end -->
               </div>
 
               <!-- article footer start -->
