@@ -2005,8 +2005,16 @@ video {
 
 @media (min-width: 1280px) {
 
+  .xl\:sticky {
+    position: sticky;
+  }
+
   .xl\:left-80 {
     left: 20rem;
+  }
+
+  .xl\:top-24 {
+    top: 6rem;
   }
 
   .xl\:ml-80 {
