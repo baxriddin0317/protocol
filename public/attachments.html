@@ -172,23 +172,12 @@
                   <h2 class="text-xs font-semibold text-zinc-900 dark:text-white">Guides</h2>
                   <div class="relative mt-3 pl-2">
                     <div class="absolute inset-y-0 left-2 w-px bg-zinc-900/10 dark:bg-white/5"></div>
-                    <div class="absolute left-2 h-6 w-px bg-emerald-500" style="top: 68px; opacity: 1"></div>
-                    <div
-                      class="absolute inset-x-0 top-0 bg-zinc-800/2.5 will-change-transform dark:bg-white/2.5"
-                      style="
-                        height: 64px;
-                        top: 64px;
-                        opacity: 1;
-                        border-radius: 8px;
-                        transform: none;
-                        transform-origin: 50% 50% 0px;
-                      "></div>
 
                     <ul role="list" class="border-l border-transparent">
                       <li class="relative">
                         <a
                           aria-current="page"
-                          class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-900 dark:text-white"
+                          class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 dark:text-white"
                           href="/">
                           <span class="truncate">Introduction</span>
                         </a>
@@ -207,22 +196,13 @@
                           href="sdks.html">
                           <span class="truncate">SDKs</span>
                         </a>
-                        <ul role="list">
-                          <li>
-                            <a
-                              class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                              href="/sdks#official-libraries">
-                              <span class="truncate">Official libraries</span>
-                            </a>
-                          </li>
-                        </ul>
                       </li>
                       <li class="relative">
                         <a
                           class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                          href="authentication.html"
-                          ><span class="truncate">Authentication</span></a
-                        >
+                          href="authentication.html">
+                          <span class="truncate">Authentication</span>
+                        </a>
                       </li>
                       <li class="relative">
                         <a
@@ -252,6 +232,10 @@
                   <h2 class="text-xs font-semibold text-zinc-900 dark:text-white">Resources</h2>
                   <div class="relative mt-3 pl-2">
                     <div class="absolute inset-y-0 left-2 w-px bg-zinc-900/10 dark:bg-white/5"></div>
+                    <div class="absolute left-2 h-6 w-px bg-emerald-500" style="top: 4px; opacity: 1"></div>
+                    <div
+                      class="absolute inset-x-0 top-0 bg-zinc-800/2.5 will-change-transform dark:bg-white/2.5"
+                      style="height: 64px; top: 0px; opacity: 1; border-radius: 8px"></div>
 
                     <ul role="list" class="border-l border-transparent">
                       <li class="relative">
@@ -261,32 +245,96 @@
                           aria-current="page">
                           <span class="truncate">Contacts</span>
                         </a>
+                        <ul role="list">
+                          <li>
+                            <a
+                              class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                              href="/contacts#the-contact-model">
+                              <span class="truncate">The contact model</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                              href="/contacts#list-all-contacts">
+                              <span class="truncate">List all contacts</span>
+                              <span
+                                class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
+                                GET
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                              href="/contacts#create-a-contact">
+                              <span class="truncate">Create a contact</span>
+                              <span
+                                class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
+                                POST
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                              href="/contacts#retrieve-a-contact">
+                              <span class="truncate">Retrieve a contact</span>
+                              <span
+                                class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
+                                GET
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                              href="/contacts#update-a-contact">
+                              <span class="truncate">Update a contact</span>
+                              <span
+                                class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
+                                PUT
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                              href="/contacts#delete-a-contact">
+                              <span class="truncate">Delete a contact</span>
+                              <span
+                                class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
+                                DELETE
+                              </span>
+                            </a>
+                          </li>
+                        </ul>
                       </li>
                       <li class="relative">
                         <a
                           class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                          href="/conversations">
+                          href="conversations.html">
                           <span class="truncate">Conversations</span>
                         </a>
                       </li>
                       <li class="relative">
                         <a
                           class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                          href="/messages">
+                          href="messages.html">
                           <span class="truncate">Messages</span>
                         </a>
                       </li>
                       <li class="relative">
                         <a
                           class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                          href="/groups">
+                          href="groups.html">
                           <span class="truncate">Groups</span>
                         </a>
                       </li>
                       <li class="relative">
                         <a
                           class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                          href="/attachments">
+                          href="attachments.html">
                           <span class="truncate">Attachments</span>
                         </a>
                       </li>
