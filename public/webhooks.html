@@ -174,8 +174,8 @@
                     <div class="absolute inset-y-0 left-2 w-px bg-zinc-900/10 dark:bg-white/5"></div>
                     <div class="absolute left-2 h-6 w-px bg-emerald-500" style="top: 196px; opacity: 1"></div>
                     <div
-                      class="absolute inset-x-0 top-0 bg-zinc-800/2.5 will-change-transform dark:bg-white/2.5"
-                      style="height: 64px; top: 192px; opacity: 1; border-radius: 8px"></div>
+                      class="absolute-div absolute inset-x-0 top-0 bg-zinc-800/2.5 will-change-transform dark:bg-white/2.5 transition-all ease-in-out duration-400"
+                      style="top: 192px; opacity: 1; border-radius: 8px"></div>
 
                     <ul role="list" class="border-l border-transparent">
                       <li class="relative">
@@ -326,7 +326,7 @@
               <div
                 class="flex-auto prose dark:prose-invert [html_:where(&>*)]:mx-auto [html_:where(&>*)]:max-w-2xl [html_:where(&>*)]:lg:mx-[calc(50%-min(50%,theme(maxWidth.lg)))] [html_:where(&>*)]:lg:max-w-3xl">
                 <!-- content start -->
-                <div class="w-full">
+                <div class="heading w-full">
                   <h1 class="scroll-mt-24">Webhooks</h1>
                   <p class="lead">
                     In this guide, we will look at how to register and consume webhooks to integrate your app with
@@ -337,7 +337,7 @@
                 <!-- content end -->
 
                 <!-- Registering webhooks start -->
-                <div id="registering-webhooks">
+                <div class="heading" id="registering-webhooks">
                   <h2 class="scroll-mt-24">
                     <a class="group text-inherit no-underline hover:text-inherit" href="#registering-webhooks">
                       <div
@@ -371,7 +371,7 @@
                 <!-- Registering webhooks end -->
 
                 <!-- Consuming webhooks start -->
-                <div id="consuming-webhooks">
+                <div class="heading" id="consuming-webhooks">
                   <h2 class="scroll-mt-24">
                     <a class="group text-inherit no-underline hover:text-inherit" href="#consuming-webhooks">
                       <div
@@ -466,7 +466,7 @@
                 <!-- Consuming webhooks end -->
                 <hr />
                 <!-- Event types start -->
-                <div class="xl:max-w-none" id="event-types">
+                <div class="heading xl:max-w-none" id="event-types">
                   <h2 class="scroll-mt-24">
                     <a class="group text-inherit no-underline hover:text-inherit" href="#event-types">
                       <div
@@ -712,7 +712,7 @@
                 <!-- Event types end -->
                 <hr />
                 <!-- Security start -->
-                <div id="security">
+                <div class="heading" id="security">
                   <h2 class="scroll-mt-24">
                     <a class="group text-inherit no-underline hover:text-inherit" href="#security">
                       <div
@@ -1037,4 +1037,5 @@
   </body>
 
   <script src="js/main.js"></script>
+  <script src="js/scrollEffect.js"></script>
 </html>

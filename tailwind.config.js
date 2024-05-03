@@ -40,6 +40,9 @@ module.exports = {
         7.5: '0.075',
         15: '0.15',
       },
+      transitionDuration: {
+        400: '400ms'
+      }
     },
   },
   plugins: [typographyPlugin, headlessuiPlugin],

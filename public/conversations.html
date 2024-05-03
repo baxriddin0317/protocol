@@ -234,8 +234,8 @@
                     <div class="absolute inset-y-0 left-2 w-px bg-zinc-900/10 dark:bg-white/5"></div>
                     <div class="absolute left-2 h-6 w-px bg-emerald-500" style="top: 4px; opacity: 1"></div>
                     <div
-                      class="absolute inset-x-0 top-0 bg-zinc-800/2.5 will-change-transform dark:bg-white/2.5"
-                      style="height: 64px; top: 0px; opacity: 1; border-radius: 8px"></div>
+                      class="absolute-div absolute inset-x-0 top-0 bg-zinc-800/2.5 will-change-transform dark:bg-white/2.5 transition-all ease-in-out duration-400"
+                      style="top: 32px; opacity: 1; border-radius: 8px"></div>
 
                     <ul role="list" class="border-l border-transparent">
                       <li class="relative">
@@ -245,19 +245,26 @@
                           aria-current="page">
                           <span class="truncate">Contacts</span>
                         </a>
+                      </li>
+                      <li class="relative">
+                        <a
+                          class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                          href="conversations.html">
+                          <span class="truncate">Conversations</span>
+                        </a>
                         <ul role="list">
                           <li>
                             <a
                               class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                              href="/contacts#the-contact-model">
-                              <span class="truncate">The contact model</span>
+                              href="/conversations#the-conversation-model">
+                              <span class="truncate">The conversation model</span>
                             </a>
                           </li>
                           <li>
                             <a
                               class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                              href="/contacts#list-all-contacts">
-                              <span class="truncate">List all contacts</span>
+                              href="/conversations#list-all-conversations">
+                              <span class="truncate">List all conversations</span>
                               <span
                                 class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
                                 GET
@@ -267,8 +274,8 @@
                           <li>
                             <a
                               class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                              href="/contacts#create-a-contact">
-                              <span class="truncate">Create a contact</span>
+                              href="/conversations#create-a-conversation">
+                              <span class="truncate">Create a conversation</span>
                               <span
                                 class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
                                 POST
@@ -278,8 +285,8 @@
                           <li>
                             <a
                               class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                              href="/contacts#retrieve-a-contact">
-                              <span class="truncate">Retrieve a contact</span>
+                              href="/conversations#retrieve-a-conversation">
+                              <span class="truncate">Retrieve a conversation</span>
                               <span
                                 class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
                                 GET
@@ -289,8 +296,8 @@
                           <li>
                             <a
                               class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                              href="/contacts#update-a-contact">
-                              <span class="truncate">Update a contact</span>
+                              href="/conversations#update-a-conversation">
+                              <span class="truncate">Update a conversation</span>
                               <span
                                 class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
                                 PUT
@@ -300,8 +307,8 @@
                           <li>
                             <a
                               class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                              href="/contacts#delete-a-contact">
-                              <span class="truncate">Delete a contact</span>
+                              href="/conversations#delete-a-conversation">
+                              <span class="truncate">Delete a conversation</span>
                               <span
                                 class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
                                 DELETE
@@ -309,13 +316,6 @@
                             </a>
                           </li>
                         </ul>
-                      </li>
-                      <li class="relative">
-                        <a
-                          class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-4 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                          href="conversations.html">
-                          <span class="truncate">Conversations</span>
-                        </a>
                       </li>
                       <li class="relative">
                         <a
@@ -360,7 +360,7 @@
               <div
                 class="flex-auto prose dark:prose-invert [html_:where(&>*)]:mx-auto [html_:where(&>*)]:max-w-2xl [html_:where(&>*)]:lg:mx-[calc(50%-min(50%,theme(maxWidth.lg)))] [html_:where(&>*)]:lg:max-w-3xl">
                 <!-- content start -->
-                <div class="w-full">
+                <div class="heading w-full">
                   <h1>Conversations</h1>
                   <p class="lead">
                     Conversations are an essential part of Protocol — they are the containers for the messages between
@@ -372,7 +372,7 @@
                 <!-- content end -->
 
                 <!-- The conversation model start -->
-                <div id="the-conversation-model">
+                <div class="heading" id="the-conversation-model">
                   <h2 class="scroll-mt-24">
                     <a class="group text-inherit no-underline hover:text-inherit" href="#the-conversation-model">
                       <div
@@ -530,7 +530,7 @@
                 <hr />
 
                 <!-- List all conversations start -->
-                <div class="xl:max-w-none" id="list-all-conversations">
+                <div class="heading xl:max-w-none" id="list-all-conversations">
                   <div class="flex items-center gap-x-3">
                     <span
                       class="font-mono text-[0.625rem] font-semibold leading-6 rounded-lg px-1.5 ring-1 ring-inset ring-emerald-300 dark:ring-emerald-400/30 bg-emerald-400/10 text-emerald-500 dark:text-emerald-400"
@@ -888,7 +888,7 @@
                 <hr />
 
                 <!-- Create a conversation start -->
-                <div class="xl:max-w-none" id="create-a-conversation">
+                <div class="heading xl:max-w-none" id="create-a-conversation">
                   <div class="flex items-center gap-x-3">
                     <span
                       class="font-mono text-[0.625rem] font-semibold leading-6 rounded-lg px-1.5 ring-1 ring-inset ring-sky-300 bg-sky-400/10 text-sky-500 dark:ring-sky-400/30 dark:bg-sky-400/10 dark:text-sky-400"
@@ -1202,7 +1202,7 @@
                 <hr />
 
                 <!-- Retrieve a conversation start -->
-                <div class="xl:max-w-none" id="retrieve-a-conversation">
+                <div class="heading xl:max-w-none" id="retrieve-a-conversation">
                   <div class="flex items-center gap-x-3">
                     <span
                       class="font-mono text-[0.625rem] font-semibold leading-6 rounded-lg px-1.5 ring-1 ring-inset ring-emerald-300 dark:ring-emerald-400/30 bg-emerald-400/10 text-emerald-500 dark:text-emerald-400"
@@ -1484,7 +1484,7 @@
                 <hr />
 
                 <!-- Update a conversation start -->
-                <div class="xl:max-w-none" id="update-a-conversation">
+                <div class="heading xl:max-w-none" id="update-a-conversation">
                   <div class="flex items-center gap-x-3">
                     <span
                       class="font-mono text-[0.625rem] font-semibold leading-6 rounded-lg px-1.5 ring-1 ring-inset ring-amber-300 bg-amber-400/10 text-amber-500 dark:ring-amber-400/30 dark:bg-amber-400/10 dark:text-amber-400"
@@ -1822,7 +1822,7 @@
                 <hr />
 
                 <!-- Delete a conversation start -->
-                <div class="xl:max-w-none" id="delete-a-conversation">
+                <div class="heading xl:max-w-none" id="delete-a-conversation">
                   <div class="flex items-center gap-x-3">
                     <span
                       class="font-mono text-[0.625rem] font-semibold leading-6 rounded-lg px-1.5 ring-1 ring-inset ring-rose-200 bg-rose-50 text-red-500 dark:ring-rose-500/20 dark:bg-rose-400/10 dark:text-rose-400"
@@ -2196,4 +2196,5 @@
   </body>
 
   <script src="js/main.js"></script>
+  <script src="js/scrollEffect.js"></script>
 </html>

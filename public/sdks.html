@@ -174,9 +174,8 @@
                     <div class="absolute inset-y-0 left-2 w-px bg-zinc-900/10 dark:bg-white/5"></div>
                     <div class="absolute left-2 h-6 w-px bg-emerald-500" style="top: 68px; opacity: 1"></div>
                     <div
-                      class="absolute inset-x-0 top-0 bg-zinc-800/2.5 will-change-transform dark:bg-white/2.5"
+                      class="absolute-div absolute inset-x-0 top-0 bg-zinc-800/2.5 will-change-transform dark:bg-white/2.5 transition-all ease-in-out duration-400"
                       style="
-                        height: 64px;
                         top: 64px;
                         opacity: 1;
                         border-radius: 8px;
@@ -311,13 +310,15 @@
             <article class="flex h-full flex-col pb-10 pt-16">
               <div
                 class="flex-auto prose dark:prose-invert [html_:where(&amp;>*)]:mx-auto [html_:where(&amp;>*)]:max-w-2xl [html_:where(&amp;>*)]:lg:mx-[calc(50%-min(50%,theme(maxWidth.lg)))] [html_:where(&amp;>*)]:lg:max-w-3xl">
-                <h1>Protocol SDKs</h1>
-                <p class="lead">
-                  The recommended way to interact with the Protocol API is by using one of our official SDKs. Today,
-                  Protocol offers fine-tuned JavaScript, Ruby, PHP, Python, and Go libraries to make your life easier
-                  and give you the best experience when consuming the API.
-                </p>
-                <div class="my-16 xl:max-w-none">
+                <div class="heading">
+                  <h1>Protocol SDKs</h1>
+                  <p class="lead">
+                    The recommended way to interact with the Protocol API is by using one of our official SDKs. Today,
+                    Protocol offers fine-tuned JavaScript, Ruby, PHP, Python, and Go libraries to make your life easier
+                    and give you the best experience when consuming the API.
+                  </p>
+                </div>
+                <div class="heading my-16 xl:max-w-none">
                   <h2 class="scroll-mt-24" id="official-libraries">
                     <a class="group text-inherit no-underline hover:text-inherit" href="#official-libraries"
                       ><div
@@ -645,4 +646,5 @@
   </body>
 
   <script src="js/main.js"></script>
+  <script src="js/scrollEffect.js"></script>
 </html>

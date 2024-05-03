@@ -234,8 +234,8 @@
                     <div class="absolute inset-y-0 left-2 w-px bg-zinc-900/10 dark:bg-white/5"></div>
                     <div class="absolute left-2 h-6 w-px bg-emerald-500" style="top: 4px; opacity: 1"></div>
                     <div
-                      class="absolute inset-x-0 top-0 bg-zinc-800/2.5 will-change-transform dark:bg-white/2.5"
-                      style="height: 64px; top: 0px; opacity: 1; border-radius: 8px"></div>
+                      class="absolute-div absolute inset-x-0 top-0 bg-zinc-800/2.5 will-change-transform dark:bg-white/2.5 transition-all ease-in-out duration-400"
+                      style="top: 64px; opacity: 1; border-radius: 8px"></div>
 
                     <ul role="list" class="border-l border-transparent">
                       <li class="relative">
@@ -245,70 +245,6 @@
                           aria-current="page">
                           <span class="truncate">Contacts</span>
                         </a>
-                        <ul role="list">
-                          <li>
-                            <a
-                              class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                              href="/contacts#the-contact-model">
-                              <span class="truncate">The contact model</span>
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                              href="/contacts#list-all-contacts">
-                              <span class="truncate">List all contacts</span>
-                              <span
-                                class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
-                                GET
-                              </span>
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                              href="/contacts#create-a-contact">
-                              <span class="truncate">Create a contact</span>
-                              <span
-                                class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
-                                POST
-                              </span>
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                              href="/contacts#retrieve-a-contact">
-                              <span class="truncate">Retrieve a contact</span>
-                              <span
-                                class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
-                                GET
-                              </span>
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                              href="/contacts#update-a-contact">
-                              <span class="truncate">Update a contact</span>
-                              <span
-                                class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
-                                PUT
-                              </span>
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                              href="/contacts#delete-a-contact">
-                              <span class="truncate">Delete a contact</span>
-                              <span
-                                class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
-                                DELETE
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
                       </li>
                       <li class="relative">
                         <a
@@ -323,6 +259,70 @@
                           href="messages.html">
                           <span class="truncate">Messages</span>
                         </a>
+                        <ul role="list">
+                          <li>
+                            <a
+                              class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                              href="/messages#the-message-model">
+                              <span class="truncate">The message model</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                              href="/messages#list-all-messages">
+                              <span class="truncate">List all messages</span>
+                              <span
+                                class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
+                                GET
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                              href="/messages#create-a-message">
+                              <span class="truncate">Create a message</span>
+                              <span
+                                class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
+                                POST
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                              href="/messages#retrieve-a-message">
+                              <span class="truncate">Retrieve a message</span>
+                              <span
+                                class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
+                                GET
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                              href="/messages#update-a-message">
+                              <span class="truncate">Update a message</span>
+                              <span
+                                class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
+                                PUT
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                              href="/message#delete-a-message">
+                              <span class="truncate">Delete a message</span>
+                              <span
+                                class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
+                                DELETE
+                              </span>
+                            </a>
+                          </li>
+                        </ul>
                       </li>
                       <li class="relative">
                         <a
@@ -360,7 +360,7 @@
               <div
                 class="flex-auto prose dark:prose-invert [html_:where(&>*)]:mx-auto [html_:where(&>*)]:max-w-2xl [html_:where(&>*)]:lg:mx-[calc(50%-min(50%,theme(maxWidth.lg)))] [html_:where(&>*)]:lg:max-w-3xl">
                 <!-- content start -->
-                <div class="w-full">
+                <div class="heading w-full">
                   <h1>Messages</h1>
                   <p class="lead">
                     Messages are what conversations are made of in Protocol — they are the basic building blocks of your
@@ -372,7 +372,7 @@
                 <!-- content end -->
 
                 <!-- The message model start -->
-                <div id="the-message-model">
+                <div class="heading" id="the-message-model">
                   <h2 class="scroll-mt-24">
                     <a class="group text-inherit no-underline hover:text-inherit" href="#the-message-model">
                       <div
@@ -517,7 +517,7 @@
                 <hr />
 
                 <!-- List all messages start -->
-                <div class="xl:max-w-none" id="list-all-messages">
+                <div class="heading xl:max-w-none" id="list-all-messages">
                   <div class="flex items-center gap-x-3">
                     <span
                       class="font-mono text-[0.625rem] font-semibold leading-6 rounded-lg px-1.5 ring-1 ring-inset ring-emerald-300 dark:ring-emerald-400/30 bg-emerald-400/10 text-emerald-500 dark:text-emerald-400"
@@ -846,7 +846,7 @@
                 <hr />
 
                 <!-- Send a message start -->
-                <div class="xl:max-w-none" id="send-a-message">
+                <div class="heading xl:max-w-none" id="send-a-message">
                   <div class="flex items-center gap-x-3">
                     <span
                       class="font-mono text-[0.625rem] font-semibold leading-6 rounded-lg px-1.5 ring-1 ring-inset ring-sky-300 bg-sky-400/10 text-sky-500 dark:ring-sky-400/30 dark:bg-sky-400/10 dark:text-sky-400"
@@ -1188,7 +1188,7 @@
                 <hr />
 
                 <!-- Retrieve a message start -->
-                <div class="xl:max-w-none" id="retrieve-a-message">
+                <div class="heading xl:max-w-none" id="retrieve-a-message">
                   <div class="flex items-center gap-x-3">
                     <span
                       class="font-mono text-[0.625rem] font-semibold leading-6 rounded-lg px-1.5 ring-1 ring-inset ring-emerald-300 dark:ring-emerald-400/30 bg-emerald-400/10 text-emerald-500 dark:text-emerald-400"
@@ -1476,7 +1476,7 @@
                 <hr />
 
                 <!-- Update a message start -->
-                <div class="xl:max-w-none" id="update-a-message">
+                <div class="heading xl:max-w-none" id="update-a-message">
                   <div class="flex items-center gap-x-3">
                     <span
                       class="font-mono text-[0.625rem] font-semibold leading-6 rounded-lg px-1.5 ring-1 ring-inset ring-amber-300 bg-amber-400/10 text-amber-500 dark:ring-amber-400/30 dark:bg-amber-400/10 dark:text-amber-400"
@@ -1819,7 +1819,7 @@
                 <hr />
 
                 <!-- Delete a message start -->
-                <div class="xl:max-w-none" id="delete-a-message">
+                <div class="heading xl:max-w-none" id="delete-a-message">
                   <div class="flex items-center gap-x-3">
                     <span
                       class="font-mono text-[0.625rem] font-semibold leading-6 rounded-lg px-1.5 ring-1 ring-inset ring-rose-200 bg-rose-50 text-red-500 dark:ring-rose-500/20 dark:bg-rose-400/10 dark:text-rose-400"
@@ -2192,4 +2192,5 @@
   </body>
 
   <script src="js/main.js"></script>
+  <script src="js/scrollEffect.js"></script>
 </html>
