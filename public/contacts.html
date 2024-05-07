@@ -249,14 +249,14 @@
                           <li>
                             <a
                               class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                              href="/contacts#the-contact-model">
+                              href="#the-contact-model">
                               <span class="truncate">The contact model</span>
                             </a>
                           </li>
                           <li>
                             <a
                               class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                              href="/contacts#list-all-contacts">
+                              href="#list-all-contacts">
                               <span class="truncate">List all contacts</span>
                               <span
                                 class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
@@ -267,7 +267,7 @@
                           <li>
                             <a
                               class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                              href="/contacts#create-a-contact">
+                              href="#create-a-contact">
                               <span class="truncate">Create a contact</span>
                               <span
                                 class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
@@ -278,7 +278,7 @@
                           <li>
                             <a
                               class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                              href="/contacts#retrieve-a-contact">
+                              href="#retrieve-a-contact">
                               <span class="truncate">Retrieve a contact</span>
                               <span
                                 class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
@@ -289,7 +289,7 @@
                           <li>
                             <a
                               class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                              href="/contacts#update-a-contact">
+                              href="#update-a-contact">
                               <span class="truncate">Update a contact</span>
                               <span
                                 class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
@@ -300,7 +300,7 @@
                           <li>
                             <a
                               class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                              href="/contacts#delete-a-contact">
+                              href="#delete-a-contact">
                               <span class="truncate">Delete a contact</span>
                               <span
                                 class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
@@ -358,21 +358,36 @@
           <main class="flex-auto">
             <article class="flex h-full flex-col pb-10 pt-16">
               <div
-                class="flex-auto prose dark:prose-invert [html_:where(&amp;>*)]:mx-auto [html_:where(&amp;>*)]:max-w-2xl [html_:where(&amp;>*)]:lg:mx-[calc(50%-min(50%,theme(maxWidth.lg)))] [html_:where(&amp;>*)]:lg:max-w-3xl">
+                class="flex-auto prose dark:prose-invert [html_:where(&amp;>*)]:mx-auto [html_:where(&amp;>*)]:lg:mx-[calc(50%-min(50%,theme(maxWidth.lg)))]">
                 <div class="heading">
                   <h1>Contacts</h1>
                   <p class="lead">
-                    As the name suggests, contacts are a core part of Protocol — the very reason Protocol exists is so you
-                    can have secure conversations with your contacts. On this page, we'll dive into the different contact
-                    endpoints you can use to manage contacts programmatically. We'll look at how to query, create, update,
-                    and delete contacts.
+                    As the name suggests, contacts are a core part of Protocol — the very reason Protocol exists is so
+                    you can have secure conversations with your contacts. On this page, we'll dive into the different
+                    contact endpoints you can use to manage contacts programmatically. We'll look at how to query,
+                    create, update, and delete contacts.
                   </p>
                 </div>
                 <div class="heading">
                   <h2 class="scroll-mt-24" id="the-contact-model">
-                    <a class="group text-inherit no-underline hover:text-inherit" href="#the-contact-model"
-                      >The contact model</a
-                    >
+                    <a class="group text-inherit no-underline hover:text-inherit" href="#the-contact-model">
+                      <div
+                        class="absolute ml-[calc(-1*var(--width))] mt-1 hidden w-[var(--width)] opacity-0 transition [--width:calc(2.625rem+0.5px+50%-min(50%,calc(theme(maxWidth.lg)+theme(spacing.8))))] group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50 2xl:[--width:theme(spacing.10)]">
+                        <div
+                          class="group/anchor block h-5 w-5 rounded-lg bg-zinc-50 ring-1 ring-inset ring-zinc-300 transition hover:ring-zinc-500 dark:bg-zinc-800 dark:ring-zinc-700 dark:hover:bg-zinc-700 dark:hover:ring-zinc-600">
+                          <svg
+                            viewBox="0 0 20 20"
+                            fill="none"
+                            stroke-linecap="round"
+                            aria-hidden="true"
+                            class="h-5 w-5 stroke-zinc-500 transition dark:stroke-zinc-400 dark:group-hover/anchor:stroke-white">
+                            <path
+                              d="m6.5 11.5-.964-.964a3.535 3.535 0 1 1 5-5l.964.964m2 2 .964.964a3.536 3.536 0 0 1-5 5L8.5 13.5m0-5 3 3"></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <span>The contact model</span>
+                    </a>
                   </h2>
                   <p>
                     The contact model contains all the information about your contacts, such as their username, avatar,
@@ -493,15 +508,30 @@
                     ><span class="font-mono text-xs text-zinc-400">/v1/contacts</span>
                   </div>
                   <h2 class="mt-2 scroll-mt-32" id="list-all-contacts">
-                    <a class="group text-inherit no-underline hover:text-inherit" href="#list-all-contacts"
-                      >List all contacts</a
-                    >
+                    <a class="group text-inherit no-underline hover:text-inherit" href="#list-all-contacts">
+                      <div
+                        class="absolute ml-[calc(-1*var(--width))] mt-1 hidden w-[var(--width)] opacity-0 transition [--width:calc(2.625rem+0.5px+50%-min(50%,calc(theme(maxWidth.lg)+theme(spacing.8))))] group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50 2xl:[--width:theme(spacing.10)]">
+                        <div
+                          class="group/anchor block h-5 w-5 rounded-lg bg-zinc-50 ring-1 ring-inset ring-zinc-300 transition hover:ring-zinc-500 dark:bg-zinc-800 dark:ring-zinc-700 dark:hover:bg-zinc-700 dark:hover:ring-zinc-600">
+                          <svg
+                            viewBox="0 0 20 20"
+                            fill="none"
+                            stroke-linecap="round"
+                            aria-hidden="true"
+                            class="h-5 w-5 stroke-zinc-500 transition dark:stroke-zinc-400 dark:group-hover/anchor:stroke-white">
+                            <path
+                              d="m6.5 11.5-.964-.964a3.535 3.535 0 1 1 5-5l.964.964m2 2 .964.964a3.536 3.536 0 0 1-5 5L8.5 13.5m0-5 3 3"></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <span>List all contacts</span>
+                    </a>
                   </h2>
                   <div class="grid grid-cols-1 items-start gap-x-16 gap-y-10 xl:max-w-none xl:grid-cols-2">
                     <div class="[&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0">
                       <p>
-                        This endpoint allows you to retrieve a paginated list of all your contacts. By default, a maximum
-                        of ten contacts are shown per page.
+                        This endpoint allows you to retrieve a paginated list of all your contacts. By default, a
+                        maximum of ten contacts are shown per page.
                       </p>
                       <h3>Optional attributes</h3>
                       <div class="my-6">
@@ -524,7 +554,8 @@
                       </div>
                     </div>
                     <div class="[&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0 xl:sticky xl:top-24">
-                      <div class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
+                      <div
+                        class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
                         <div class="not-prose">
                           <div
                             class="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 dark:border-zinc-800 dark:bg-transparent">
@@ -689,7 +720,8 @@
                           </div>
                         </div>
                       </div>
-                      <div class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
+                      <div
+                        class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
                         <div class="not-prose">
                           <div
                             class="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 dark:border-zinc-800 dark:bg-transparent">
@@ -759,15 +791,30 @@
                     ><span class="font-mono text-xs text-zinc-400">/v1/contacts</span>
                   </div>
                   <h2 class="mt-2 scroll-mt-32" id="create-a-contact">
-                    <a class="group text-inherit no-underline hover:text-inherit" href="#create-a-contact"
-                      >Create a contact</a
-                    >
+                    <a class="group text-inherit no-underline hover:text-inherit" href="#create-a-contact">
+                      <div
+                        class="absolute ml-[calc(-1*var(--width))] mt-1 hidden w-[var(--width)] opacity-0 transition [--width:calc(2.625rem+0.5px+50%-min(50%,calc(theme(maxWidth.lg)+theme(spacing.8))))] group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50 2xl:[--width:theme(spacing.10)]">
+                        <div
+                          class="group/anchor block h-5 w-5 rounded-lg bg-zinc-50 ring-1 ring-inset ring-zinc-300 transition hover:ring-zinc-500 dark:bg-zinc-800 dark:ring-zinc-700 dark:hover:bg-zinc-700 dark:hover:ring-zinc-600">
+                          <svg
+                            viewBox="0 0 20 20"
+                            fill="none"
+                            stroke-linecap="round"
+                            aria-hidden="true"
+                            class="h-5 w-5 stroke-zinc-500 transition dark:stroke-zinc-400 dark:group-hover/anchor:stroke-white">
+                            <path
+                              d="m6.5 11.5-.964-.964a3.535 3.535 0 1 1 5-5l.964.964m2 2 .964.964a3.536 3.536 0 0 1-5 5L8.5 13.5m0-5 3 3"></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <span> Create a contact </span>
+                    </a>
                   </h2>
                   <div class="grid grid-cols-1 items-start gap-x-16 gap-y-10 xl:max-w-none xl:grid-cols-2">
                     <div class="[&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0">
                       <p>
-                        This endpoint allows you to add a new contact to your contact list in Protocol. To add a contact,
-                        you must provide their Protocol username and phone number.
+                        This endpoint allows you to add a new contact to your contact list in Protocol. To add a
+                        contact, you must provide their Protocol username and phone number.
                       </p>
                       <h3>Required attributes</h3>
                       <div class="my-6">
@@ -835,7 +882,8 @@
                       </div>
                     </div>
                     <div class="[&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0 xl:sticky xl:top-24">
-                      <div class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
+                      <div
+                        class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
                         <div class="not-prose">
                           <div
                             class="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 dark:border-zinc-800 dark:bg-transparent">
@@ -1000,7 +1048,8 @@
                           </div>
                         </div>
                       </div>
-                      <div class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
+                      <div
+                        class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
                         <div class="not-prose">
                           <div
                             class="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 dark:border-zinc-800 dark:bg-transparent">
@@ -1061,9 +1110,24 @@
                     ><span class="font-mono text-xs text-zinc-400">/v1/contacts/:id</span>
                   </div>
                   <h2 class="mt-2 scroll-mt-32" id="retrieve-a-contact">
-                    <a class="group text-inherit no-underline hover:text-inherit" href="#retrieve-a-contact"
-                      >Retrieve a contact</a
-                    >
+                    <a class="group text-inherit no-underline hover:text-inherit" href="#retrieve-a-contact">
+                      <div
+                        class="absolute ml-[calc(-1*var(--width))] mt-1 hidden w-[var(--width)] opacity-0 transition [--width:calc(2.625rem+0.5px+50%-min(50%,calc(theme(maxWidth.lg)+theme(spacing.8))))] group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50 2xl:[--width:theme(spacing.10)]">
+                        <div
+                          class="group/anchor block h-5 w-5 rounded-lg bg-zinc-50 ring-1 ring-inset ring-zinc-300 transition hover:ring-zinc-500 dark:bg-zinc-800 dark:ring-zinc-700 dark:hover:bg-zinc-700 dark:hover:ring-zinc-600">
+                          <svg
+                            viewBox="0 0 20 20"
+                            fill="none"
+                            stroke-linecap="round"
+                            aria-hidden="true"
+                            class="h-5 w-5 stroke-zinc-500 transition dark:stroke-zinc-400 dark:group-hover/anchor:stroke-white">
+                            <path
+                              d="m6.5 11.5-.964-.964a3.535 3.535 0 1 1 5-5l.964.964m2 2 .964.964a3.536 3.536 0 0 1-5 5L8.5 13.5m0-5 3 3"></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <span> Retrieve a contact </span>
+                    </a>
                   </h2>
                   <div class="grid grid-cols-1 items-start gap-x-16 gap-y-10 xl:max-w-none xl:grid-cols-2">
                     <div class="[&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0">
@@ -1074,7 +1138,8 @@
                       </p>
                     </div>
                     <div class="[&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0 xl:sticky xl:top-24">
-                      <div class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
+                      <div
+                        class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
                         <div class="not-prose">
                           <div
                             class="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 dark:border-zinc-800 dark:bg-transparent">
@@ -1237,7 +1302,8 @@
                           </div>
                         </div>
                       </div>
-                      <div class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
+                      <div
+                        class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
                         <div class="not-prose">
                           <div
                             class="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 dark:border-zinc-800 dark:bg-transparent">
@@ -1298,16 +1364,31 @@
                     ><span class="font-mono text-xs text-zinc-400">/v1/contacts/:id</span>
                   </div>
                   <h2 class="mt-2 scroll-mt-32" id="update-a-contact">
-                    <a class="group text-inherit no-underline hover:text-inherit" href="#update-a-contact"
-                      >Update a contact</a
-                    >
+                    <a class="group text-inherit no-underline hover:text-inherit" href="#update-a-contact">
+                      <div
+                        class="absolute ml-[calc(-1*var(--width))] mt-1 hidden w-[var(--width)] opacity-0 transition [--width:calc(2.625rem+0.5px+50%-min(50%,calc(theme(maxWidth.lg)+theme(spacing.8))))] group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50 2xl:[--width:theme(spacing.10)]">
+                        <div
+                          class="group/anchor block h-5 w-5 rounded-lg bg-zinc-50 ring-1 ring-inset ring-zinc-300 transition hover:ring-zinc-500 dark:bg-zinc-800 dark:ring-zinc-700 dark:hover:bg-zinc-700 dark:hover:ring-zinc-600">
+                          <svg
+                            viewBox="0 0 20 20"
+                            fill="none"
+                            stroke-linecap="round"
+                            aria-hidden="true"
+                            class="h-5 w-5 stroke-zinc-500 transition dark:stroke-zinc-400 dark:group-hover/anchor:stroke-white">
+                            <path
+                              d="m6.5 11.5-.964-.964a3.535 3.535 0 1 1 5-5l.964.964m2 2 .964.964a3.536 3.536 0 0 1-5 5L8.5 13.5m0-5 3 3"></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <span> Update a contact </span>
+                    </a>
                   </h2>
                   <div class="grid grid-cols-1 items-start gap-x-16 gap-y-10 xl:max-w-none xl:grid-cols-2">
                     <div class="[&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0">
                       <p>
-                        This endpoint allows you to perform an update on a contact. Currently, the only attribute that can
-                        be updated on contacts is the <code>display_name</code> attribute which controls how a contact
-                        appears in your contact list in Protocol.
+                        This endpoint allows you to perform an update on a contact. Currently, the only attribute that
+                        can be updated on contacts is the <code>display_name</code> attribute which controls how a
+                        contact appears in your contact list in Protocol.
                       </p>
                       <h3>Optional attributes</h3>
                       <div class="my-6">
@@ -1332,7 +1413,8 @@
                       </div>
                     </div>
                     <div class="[&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0 xl:sticky xl:top-24">
-                      <div class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
+                      <div
+                        class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
                         <div class="not-prose">
                           <div
                             class="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 dark:border-zinc-800 dark:bg-transparent">
@@ -1495,7 +1577,8 @@
                           </div>
                         </div>
                       </div>
-                      <div class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
+                      <div
+                        class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
                         <div class="not-prose">
                           <div
                             class="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 dark:border-zinc-800 dark:bg-transparent">
@@ -1556,9 +1639,24 @@
                     ><span class="font-mono text-xs text-zinc-400">/v1/contacts/:id</span>
                   </div>
                   <h2 class="mt-2 scroll-mt-32" id="delete-a-contact">
-                    <a class="group text-inherit no-underline hover:text-inherit" href="#delete-a-contact"
-                      >Delete a contact</a
-                    >
+                    <a class="group text-inherit no-underline hover:text-inherit" href="#delete-a-contact">
+                      <div
+                        class="absolute ml-[calc(-1*var(--width))] mt-1 hidden w-[var(--width)] opacity-0 transition [--width:calc(2.625rem+0.5px+50%-min(50%,calc(theme(maxWidth.lg)+theme(spacing.8))))] group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50 2xl:[--width:theme(spacing.10)]">
+                        <div
+                          class="group/anchor block h-5 w-5 rounded-lg bg-zinc-50 ring-1 ring-inset ring-zinc-300 transition hover:ring-zinc-500 dark:bg-zinc-800 dark:ring-zinc-700 dark:hover:bg-zinc-700 dark:hover:ring-zinc-600">
+                          <svg
+                            viewBox="0 0 20 20"
+                            fill="none"
+                            stroke-linecap="round"
+                            aria-hidden="true"
+                            class="h-5 w-5 stroke-zinc-500 transition dark:stroke-zinc-400 dark:group-hover/anchor:stroke-white">
+                            <path
+                              d="m6.5 11.5-.964-.964a3.535 3.535 0 1 1 5-5l.964.964m2 2 .964.964a3.536 3.536 0 0 1-5 5L8.5 13.5m0-5 3 3"></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <span> Delete a contact </span>
+                    </a>
                   </h2>
                   <div class="grid grid-cols-1 items-start gap-x-16 gap-y-10 xl:max-w-none xl:grid-cols-2">
                     <div class="[&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0">
@@ -1568,7 +1666,8 @@
                       </p>
                     </div>
                     <div class="[&amp;>:first-child]:mt-0 [&amp;>:last-child]:mb-0 xl:sticky xl:top-24">
-                      <div class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
+                      <div
+                        class="my-6 overflow-hidden rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10">
                         <div class="not-prose">
                           <div
                             class="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 dark:border-zinc-800 dark:bg-transparent">
