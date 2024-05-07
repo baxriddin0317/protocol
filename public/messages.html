@@ -232,7 +232,7 @@
                   <h2 class="text-xs font-semibold text-zinc-900 dark:text-white">Resources</h2>
                   <div class="relative mt-3 pl-2">
                     <div class="absolute inset-y-0 left-2 w-px bg-zinc-900/10 dark:bg-white/5"></div>
-                    <div class="absolute left-2 h-6 w-px bg-emerald-500" style="top: 4px; opacity: 1"></div>
+                    <div class="absolute left-2 h-6 w-px bg-emerald-500" style="top: 68px; opacity: 1"></div>
                     <div
                       class="absolute-div absolute inset-x-0 top-0 bg-zinc-800/2.5 will-change-transform dark:bg-white/2.5 transition-all ease-in-out duration-400"
                       style="top: 64px; opacity: 1; border-radius: 8px"></div>
@@ -263,14 +263,14 @@
                           <li>
                             <a
                               class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                              href="/messages#the-message-model">
+                              href="#the-message-model">
                               <span class="truncate">The message model</span>
                             </a>
                           </li>
                           <li>
                             <a
                               class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                              href="/messages#list-all-messages">
+                              href="#list-all-messages">
                               <span class="truncate">List all messages</span>
                               <span
                                 class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
@@ -281,8 +281,8 @@
                           <li>
                             <a
                               class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                              href="/messages#create-a-message">
-                              <span class="truncate">Create a message</span>
+                              href="#send-a-message">
+                              <span class="truncate">Send a message</span>
                               <span
                                 class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
                                 POST
@@ -292,7 +292,7 @@
                           <li>
                             <a
                               class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                              href="/messages#retrieve-a-message">
+                              href="#retrieve-a-message">
                               <span class="truncate">Retrieve a message</span>
                               <span
                                 class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
@@ -303,7 +303,7 @@
                           <li>
                             <a
                               class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                              href="/messages#update-a-message">
+                              href="#update-a-message">
                               <span class="truncate">Update a message</span>
                               <span
                                 class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
@@ -314,7 +314,7 @@
                           <li>
                             <a
                               class="flex justify-between gap-2 py-1 pr-3 text-sm transition pl-7 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                              href="/message#delete-a-message">
+                              href="#delete-a-message">
                               <span class="truncate">Delete a message</span>
                               <span
                                 class="font-mono text-[0.625rem] font-semibold leading-6 text-zinc-400 dark:text-zinc-500">
@@ -372,8 +372,8 @@
                 <!-- content end -->
 
                 <!-- The message model start -->
-                <div class="heading" id="the-message-model">
-                  <h2 class="scroll-mt-24">
+                <div class="heading">
+                  <h2 class="scroll-mt-24" id="the-message-model">
                     <a class="group text-inherit no-underline hover:text-inherit" href="#the-message-model">
                       <div
                         class="absolute ml-[calc(-1*var(--width))] mt-1 hidden w-[var(--width)] opacity-0 transition [--width:calc(2.625rem+0.5px+50%-min(50%,calc(theme(maxWidth.lg)+theme(spacing.8))))] group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50 2xl:[--width:theme(spacing.10)]">
@@ -517,7 +517,7 @@
                 <hr />
 
                 <!-- List all messages start -->
-                <div class="heading xl:max-w-none" id="list-all-messages">
+                <div class="heading xl:max-w-none scroll-mt-24" id="list-all-messages">
                   <div class="flex items-center gap-x-3">
                     <span
                       class="font-mono text-[0.625rem] font-semibold leading-6 rounded-lg px-1.5 ring-1 ring-inset ring-emerald-300 dark:ring-emerald-400/30 bg-emerald-400/10 text-emerald-500 dark:text-emerald-400"
@@ -526,7 +526,7 @@
                     <span class="h-0.5 w-0.5 rounded-full bg-zinc-300 dark:bg-zinc-600"></span>
                     <span class="font-mono text-xs text-zinc-400">/v1/messages</span>
                   </div>
-                  <h2 class="mt-2 scroll-mt-24">
+                  <h2 class="mt-2">
                     <a class="group text-inherit no-underline hover:text-inherit" href="#list-all-messages">
                       <div
                         class="absolute ml-[calc(-1*var(--width))] mt-1 hidden w-[var(--width)] opacity-0 transition [--width:calc(2.625rem+0.5px+50%-min(50%,calc(theme(maxWidth.lg)+theme(spacing.8))))] group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50 2xl:[--width:theme(spacing.10)]">
@@ -846,7 +846,7 @@
                 <hr />
 
                 <!-- Send a message start -->
-                <div class="heading xl:max-w-none" id="send-a-message">
+                <div class="heading xl:max-w-none scroll-mt-24" id="send-a-message">
                   <div class="flex items-center gap-x-3">
                     <span
                       class="font-mono text-[0.625rem] font-semibold leading-6 rounded-lg px-1.5 ring-1 ring-inset ring-sky-300 bg-sky-400/10 text-sky-500 dark:ring-sky-400/30 dark:bg-sky-400/10 dark:text-sky-400"
@@ -855,7 +855,7 @@
                     <span class="h-0.5 w-0.5 rounded-full bg-zinc-300 dark:bg-zinc-600"></span>
                     <span class="font-mono text-xs text-zinc-400">/v1/messages</span>
                   </div>
-                  <h2 class="mt-2 scroll-mt-24">
+                  <h2 class="mt-2">
                     <a class="group text-inherit no-underline hover:text-inherit" href="#send-a-message">
                       <div
                         class="absolute ml-[calc(-1*var(--width))] mt-1 hidden w-[var(--width)] opacity-0 transition [--width:calc(2.625rem+0.5px+50%-min(50%,calc(theme(maxWidth.lg)+theme(spacing.8))))] group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50 2xl:[--width:theme(spacing.10)]">
@@ -1188,7 +1188,7 @@
                 <hr />
 
                 <!-- Retrieve a message start -->
-                <div class="heading xl:max-w-none" id="retrieve-a-message">
+                <div class="heading xl:max-w-none scroll-mt-24" id="retrieve-a-message">
                   <div class="flex items-center gap-x-3">
                     <span
                       class="font-mono text-[0.625rem] font-semibold leading-6 rounded-lg px-1.5 ring-1 ring-inset ring-emerald-300 dark:ring-emerald-400/30 bg-emerald-400/10 text-emerald-500 dark:text-emerald-400"
@@ -1197,7 +1197,7 @@
                     <span class="h-0.5 w-0.5 rounded-full bg-zinc-300 dark:bg-zinc-600"></span>
                     <span class="font-mono text-xs text-zinc-400">/v1/messages/:id</span>
                   </div>
-                  <h2 class="mt-2 scroll-mt-24">
+                  <h2 class="mt-2">
                     <a class="group text-inherit no-underline hover:text-inherit" href="#retrieve-a-message">
                       <div
                         class="absolute ml-[calc(-1*var(--width))] mt-1 hidden w-[var(--width)] opacity-0 transition [--width:calc(2.625rem+0.5px+50%-min(50%,calc(theme(maxWidth.lg)+theme(spacing.8))))] group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50 2xl:[--width:theme(spacing.10)]">
@@ -1476,7 +1476,7 @@
                 <hr />
 
                 <!-- Update a message start -->
-                <div class="heading xl:max-w-none" id="update-a-message">
+                <div class="heading xl:max-w-none scroll-mt-24" id="update-a-message">
                   <div class="flex items-center gap-x-3">
                     <span
                       class="font-mono text-[0.625rem] font-semibold leading-6 rounded-lg px-1.5 ring-1 ring-inset ring-amber-300 bg-amber-400/10 text-amber-500 dark:ring-amber-400/30 dark:bg-amber-400/10 dark:text-amber-400"
@@ -1485,7 +1485,7 @@
                     <span class="h-0.5 w-0.5 rounded-full bg-zinc-300 dark:bg-zinc-600"></span>
                     <span class="font-mono text-xs text-zinc-400">/v1/messages/:id</span>
                   </div>
-                  <h2 class="mt-2 scroll-mt-24">
+                  <h2 class="mt-2">
                     <a class="group text-inherit no-underline hover:text-inherit" href="#update-a-message">
                       <div
                         class="absolute ml-[calc(-1*var(--width))] mt-1 hidden w-[var(--width)] opacity-0 transition [--width:calc(2.625rem+0.5px+50%-min(50%,calc(theme(maxWidth.lg)+theme(spacing.8))))] group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50 2xl:[--width:theme(spacing.10)]">
@@ -1804,9 +1804,9 @@
                                   Copy
                                 </span>
                                 <span
-                                  class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message"
-                                  >Copied!</span
-                                >
+                                  class="hidden pointer-events-none items-center justify-center text-emerald-400 transition duration-300 copied-message">
+                                  Copied!
+                                </span>
                               </button>
                             </div>
                           </div>
@@ -1819,7 +1819,7 @@
                 <hr />
 
                 <!-- Delete a message start -->
-                <div class="heading xl:max-w-none" id="delete-a-message">
+                <div class="heading xl:max-w-none scroll-mt-24" id="delete-a-message">
                   <div class="flex items-center gap-x-3">
                     <span
                       class="font-mono text-[0.625rem] font-semibold leading-6 rounded-lg px-1.5 ring-1 ring-inset ring-rose-200 bg-rose-50 text-red-500 dark:ring-rose-500/20 dark:bg-rose-400/10 dark:text-rose-400"
@@ -1828,7 +1828,7 @@
                     <span class="h-0.5 w-0.5 rounded-full bg-zinc-300 dark:bg-zinc-600"></span>
                     <span class="font-mono text-xs text-zinc-400">/v1/messages/:id</span>
                   </div>
-                  <h2 class="mt-2 scroll-mt-24">
+                  <h2 class="mt-2">
                     <a class="group text-inherit no-underline hover:text-inherit" href="#delete-a-message">
                       <div
                         class="absolute ml-[calc(-1*var(--width))] mt-1 hidden w-[var(--width)] opacity-0 transition [--width:calc(2.625rem+0.5px+50%-min(50%,calc(theme(maxWidth.lg)+theme(spacing.8))))] group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50 2xl:[--width:theme(spacing.10)]">
